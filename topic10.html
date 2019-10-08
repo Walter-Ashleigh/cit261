@@ -31,11 +31,9 @@
         <p>
             <video width="320" height="240" controls>
             <source src="movie.mp4" type="video/mp4">
-            <source src="movie.ogg" type="video/ogg">
             Your browser does not support the video tag.
             </video>
             
-            <p><strong>Note:</strong> The video tag is not supported in Internet Explorer 8 and earlier versions.</p>
         </p>
 
         <p>
@@ -44,12 +42,13 @@
                 two formats. If you place text between the opening and closing audio tags, that text 
                 will be displayed only if the the user opened the page on a browser that doesn't 
                 support the audio tag.  This is the same for the video and canvas tags.  You can use 
-                the controls attribute to add audio controls to play, pause, adjust volume, loop, etc.
+                the controls attribute to add audio controls to play, pause, adjust volume, loop, etc. 
+                The audio tag defines the sound content and the source tag defines the resources for 
+                the element.
             </p>
             
             <audio controls loop>
-            <source src ="Night_Sounds_Crickets.ogg" type="audio/ogg">
-            <source src="Night_Sounds_Crickets.mp3" type="audio/mpeg">
+            <source src="./Downloads/Night_Sounds_Crickets.mp3" type="audio/mpeg">
             Your browser does not support the audio element.
             </audio>
                       
