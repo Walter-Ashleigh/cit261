@@ -43,11 +43,12 @@
                 file formats: MP3, WAV and OGG.  MP3 is supported on more browsers than the other
                 two formats. If you place text between the opening and closing audio tags, that text 
                 will be displayed only if the the user opened the page on a browser that doesn't 
-                support the audio tag.  This is the same for the video and canvas tags. Some of the
-                attributes for the audio tage are: autoplay, loop and preload.  You can use these to 
+                support the audio tag.  This is the same for the video and canvas tags.  You can use 
+                the controls attribute to add audio controls to play, pause, adjust volume, loop, etc.
             </p>
             
             <audio controls loop>
+            <source src ="Night_Sounds_Crickets.ogg" type="audio/ogg">
             <source src="Night_Sounds_Crickets.mp3" type="audio/mpeg">
             Your browser does not support the audio element.
             </audio>
@@ -88,12 +89,13 @@
                 // a line to appear in canvas
                 ctx.stroke();
                 </script>
+                <br></br>
 
 <canvas id="myCanvas2" width="200" height="200"
 style="border:1px solid #d3d3d3;">
 Your browser does not support the canvas element.
 </canvas>
-<br></br>
+
 <script>
                 // locate the canvas element
                 var canvas = document.getElementById("myCanvas2");
