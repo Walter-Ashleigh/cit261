@@ -45,22 +45,38 @@
             Your browser does not support the audio element.
             </audio>
                       
-            <p><strong>Note:</strong> The audio tag is not supported in Internet Explorer 8 and earlier versions.</p>
+            <p></p>
                       
         </p>
 
         <p>
-                <canvas id="myCanvas">Your browser does not support the HTML5 canvas tag.</canvas>
-
+            <p>The canvas element is used to draw graphics on a page via scripting.
+                The element itself is only a container and in order for graphics to be displayed
+                you must use a script to draw the graphics.  There's several methods for drawing 
+                paths, boxes, circles, text and more. The text drawn can be animated or non-animated.
+                The objects inside canvas can move.  The element can respond to user actions such as 
+                hover, button clicks or mouse clicks.  The canvas element must contain an id as well 
+                as a defined height and width. You may use multiple canvas elements on one page. 
+                You can also style it with a border.
+            </p>
+                <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;">
+                Your browser does not support the canvas tag.</canvas>
                 <script>
-                var c = document.getElementById("myCanvas");
-                var ctx = c.getContext("2d");
+                // locate the canvas element
+                var canvas = document.getElementById("myCanvas");
+                // create a drawing object
+                // getContext() is a built in html object with methods and properties
+                // for drawing
+                var ctx = canvas.getContext("2d");
+                // the fillStyle property fills in the object
+                // can be a color, gradient or pattern
                 ctx.fillStyle = "#FF0000";
+                // fillRect(x, y, width, height) draws a rectangle filled with the 
+                // fillStyle
                 ctx.fillRect(0, 0, 80, 100);
                 </script>
                 
-                <p><strong>Note:</strong> The canvas tag is not supported in Internet 
-                Explorer 8 and earlier versions.</p>
+                <p></p>
                 
                 </body>
         </p>
