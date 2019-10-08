@@ -60,12 +60,34 @@
                 You can also style it with a border. Canvas is a two dimensional grid and the upper
                 left corner's coordinates are (0, 0). Some methods that can be easily used are moveTo(), 
                 lineTo(), beginPath() and arc().  The first two allow you to draw a line with a starting 
-                and end point.  The second two allow you to draw a circle with a starting point and 
-                another to determine the size.
+                and end point.  The second two allow you to draw a circle by starting the path and 
+                another to determine the size. 
             </p>
                 <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;">
-                Your browser does not support the canvas tag.</canvas>
+                Your browser does not support the canvas element.</canvas>
                 <script>
+                // locate the canvas element
+                var canvas = document.getElementById("myCanvas");
+                // create a drawing object
+                // getContext() is a built in html object with methods and properties
+                // for drawing
+                var ctx = canvas.getContext("2d");
+                // begins path
+                ctx.beginPath();
+                // determines the size of the circle
+                ctx.arc(95,50,40,0,2*Math.PI);
+                //changes the color of the line
+                ctx.strokeStyle = 'pink';
+                // a line to appear in canvas
+                ctx.stroke();
+                </script>
+
+<canvas id="myCanvas2" width="200" height="200"
+style="border:1px solid #d3d3d3;">
+Your browser does not support the canvas element.
+</canvas>
+
+<script>
                 // locate the canvas element
                 var canvas = document.getElementById("myCanvas");
                 // create a drawing object
@@ -77,12 +99,21 @@
                 ctx.fillStyle = "#FF0000";
                 // fillRect(x, y, width, height) draws a rectangle filled with the 
                 // fillStyle
-                ctx.fillRect(0, 0, 100, 100);
+                ctx.fillRect(50, 50, 100, 100);
+</script>
 
-                ctx.beginPath();
-                ctx.arc(95,50,40,0,2*Math.PI);
-                ctx.stroke();
-                </script>
+<canvas id="myCanvas3" width="300" height="200" style="border:1px solid #000000;">
+Your browser does not support the canvas element.
+</canvas>
+
+<script>
+var canvas = document.getElementById("myCanvas3");
+var ctx=canvas.getContext("2d");
+ctx.font="30px Comic Sans MS";
+ctx.fillStyle = "white";
+ctx.textAlign = "center";
+ctx.fillText("Check out my text!", canvas.width/2, canvas.height/2);
+</script>
                 
                 <p></p>
                 
