@@ -39,9 +39,16 @@
         </p>
 
         <p>
-            <audio controls>
-            <source src="horse.ogg" type="audio/ogg">
-            <source src="horse.mp3" type="audio/mpeg">
+            <p>Tha audio tag defines sounds or other audio streams.  There are three supported
+                file formats: MP3, WAV and OGG.  MP3 is supported on more browsers than the other
+                two formats. If you place text between the opening and closing audio tags, that text 
+                will be displayed only if the the user opened the page on a browser that doesn't 
+                support the audio tag.  This is the same for the video and canvas tags. Some of the
+                attributes for the audio tage are: autoplay, loop and preload.  You can use these to 
+            </p>
+            
+            <audio controls loop>
+            <source src="Night_Sounds_Crickets.mp3" type="audio/mpeg">
             Your browser does not support the audio element.
             </audio>
                       
@@ -50,7 +57,7 @@
         </p>
 
         <p>
-            <p>The canvas element is used to draw graphics on a page via scripting.
+            <p>The canvas tag is used to draw graphics on a page via scripting.
                 The element itself is only a container and in order for graphics to be displayed
                 you must use a script to draw the graphics.  There's several methods for drawing 
                 paths, boxes, circles, text and more. The text drawn can be animated or non-animated.
@@ -86,10 +93,10 @@
 style="border:1px solid #d3d3d3;">
 Your browser does not support the canvas element.
 </canvas>
-
+<br></br>
 <script>
                 // locate the canvas element
-                var canvas = document.getElementById("myCanvas");
+                var canvas = document.getElementById("myCanvas2");
                 // create a drawing object
                 // getContext() is a built in html object with methods and properties
                 // for drawing
@@ -102,6 +109,7 @@ Your browser does not support the canvas element.
                 ctx.fillRect(50, 50, 100, 100);
 </script>
 
+<br></br>
 <canvas id="myCanvas3" width="300" height="200" style="border:1px solid #000000;">
 Your browser does not support the canvas element.
 </canvas>
