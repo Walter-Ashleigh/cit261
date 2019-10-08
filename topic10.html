@@ -57,7 +57,11 @@
                 The objects inside canvas can move.  The element can respond to user actions such as 
                 hover, button clicks or mouse clicks.  The canvas element must contain an id as well 
                 as a defined height and width. You may use multiple canvas elements on one page. 
-                You can also style it with a border.
+                You can also style it with a border. Canvas is a two dimensional grid and the upper
+                left corner's coordinates are (0, 0). Some methods that can be easily used are moveTo(), 
+                lineTo(), beginPath() and arc().  The first two allow you to draw a line with a starting 
+                and end point.  The second two allow you to draw a circle with a starting point and 
+                another to determine the size.
             </p>
                 <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;">
                 Your browser does not support the canvas tag.</canvas>
@@ -73,7 +77,10 @@
                 ctx.fillStyle = "#FF0000";
                 // fillRect(x, y, width, height) draws a rectangle filled with the 
                 // fillStyle
-                ctx.fillRect(0, 0, 80, 100);
+
+                ctx.beginPath();
+                ctx.arc(95,50,40,0,2*Math.PI);
+                ctx.stroke();
                 </script>
                 
                 <p></p>
