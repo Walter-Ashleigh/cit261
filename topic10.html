@@ -9,6 +9,9 @@
     <link rel="stylesheet" type="text/css" href="StyleSheet1.css">
     <script src="Script1.js"></script>
     <style> 
+    body {
+        max-width: 600px;
+    }
         #myDIV {
             border: 1px solid black;
             background-color: lightblue;
@@ -82,7 +85,7 @@
                 // create a drawing object
                 // getContext() is a built in html object with methods and properties
                 // for drawing
-                var ctx = canvas.getContext("4d");
+                var ctx = canvas.getContext("2d");
                 // begins path
                 ctx.beginPath();
                 // determines the size of the circle
