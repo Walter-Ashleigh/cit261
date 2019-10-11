@@ -20,10 +20,14 @@ p {
     line-height: 13px;
     text-align: center;
    }
-   a{
+a {
      font-size: small;
      padding: 0px 0px 0px 10px;
    }
+video {
+    width: 100%    !important;
+    height: auto   !important;
+  }
 article, header, div {
     background-color: #CFC4C7;
     width: auto;

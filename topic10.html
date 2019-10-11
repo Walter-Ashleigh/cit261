@@ -12,45 +12,42 @@
     <main>
         <header>HTML5 Tags for Media</header>
         <div>
-            <p>The video tag specifies movie clips or other types of video streams.
-                The supported file formats are: MP4, WebM and OGG.  MP4 is most widely used because
-                it's supported by more browser types.
-            </p>
-            <video width="320" height="240" controls>
+            <h1>Video</h1>
+            <video controls autoplay>
             <source src="../cit261/Storm_Warning.mp4" type="video/mp4">
             Your browser does not support the video tag.
             </video>
-            
+            <p>The video tag specifies movie clips or other types of video streams.
+                    The supported file formats are: MP4, WebM and OGG.  MP4 is most widely used because
+                    it's supported by more browser types.
+            </p>
         </div>
         <div>
-            <p>The audio tag defines sounds or other audio streams.  There are three supported
-                file formats: MP3, WAV and OGG.  MP3 is supported on more browsers than the other
-                two formats. If you place text between the opening and closing audio tags, that text 
-                will be displayed only if the the user opened the page on a browser that doesn't 
-                support the audio tag.  This is the same for the video and canvas tags.  You can use 
-                the controls attribute to add audio controls to play, pause, adjust volume, loop, etc. 
-                The audio tag defines the sound content and the source tag defines the resources for 
-                the element.
-            </p>
+            <h1>Audio</h1>
             <audio controls loop>
             <source src="../cit261/Night_Sounds_Crickets.mp3" type="audio/mpeg">
             Your browser does not support the audio element.
-            </audio>           
+            </audio>     
+            <p>The audio tag defines sounds or other audio streams.  There are three supported
+                    file formats: MP3, WAV and OGG.  MP3 is supported on more browsers than the other
+                    two formats. If you place text between the opening and closing audio tags, that text 
+                    will be displayed only if the the user opened the page on a browser that doesn't 
+                    support the audio tag.  This is the same for the video and canvas tags.  You can use 
+                    the controls attribute to add audio controls to play, pause, adjust volume, loop, etc. 
+                    The audio tag defines the sound content and the source tag defines the resources for 
+                    the element.
+            </p>      
         </div>
         <div>
+            <h1>Canvas</h1>
             <p>The canvas tag is used to draw graphics on a page via scripting.
                 The element itself is only a container and in order for graphics to be displayed
                 you must use a script to draw the graphics.  There's several methods for drawing 
                 paths, boxes, circles, text and more. The text drawn can be animated or non-animated.
                 The objects inside canvas can move.  The element can respond to user actions such as 
-                hover, button clicks or mouse clicks.  The canvas element must contain an id as well 
-                as a defined height and width. You may use multiple canvas elements on one page. 
-                You can also style it with a border. Canvas is a two dimensional grid and the upper
-                left corner's coordinates are (0, 0). Some methods that can be easily used are moveTo(), 
-                lineTo(), beginPath() and arc().  The first two allow you to draw a line with a starting 
-                and end point.  The second two allow you to draw a circle by starting the path and 
-                another to determine the size. 
+                hover, button clicks or mouse clicks.
             </p>
+            <p>Examples:</p>
                 <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;">
                 Your browser does not support the canvas element.</canvas>
                 <script>
