@@ -8,6 +8,7 @@ body {
     background-image: url('../cit261/watercolor-floral.jpg');
     background-attachment: fixed;
     background-color: #FFFFF4;
+    text-align: left;
 }
 h1 {
     font-family: cinzel;
