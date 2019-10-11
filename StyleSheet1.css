@@ -29,9 +29,7 @@ video {
     height: auto   !important;
   }
 audio {
-    text-align: left;
     margin: 0 auto;
-    width: xxxem;
   }
 article, header, div {
     background-color: #CFC4C7;
