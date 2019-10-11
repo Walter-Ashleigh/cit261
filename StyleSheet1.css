@@ -1,4 +1,7 @@
-﻿body {
+﻿header {
+
+}
+body {
     max-width: 500px;
     background-image: url('../cit261/seamless_floral.jpg');
     background-color: #ECE8EA;
@@ -19,7 +22,7 @@ p {
      font-size: small;
      padding: 0px 0px 0px 10px;
    }
-article {
+article, header {
     background-color: #CFC4C7;
     width: auto;
     border: 3px solid #9D9497;
