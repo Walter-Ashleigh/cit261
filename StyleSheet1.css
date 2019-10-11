@@ -6,7 +6,7 @@
 h1 {
     font-family: cinzel;
     font-size 18px;
-    line-height: 5px;
+    line-height: 15px;
     text-align: center;
     }
 p {
@@ -14,12 +14,15 @@ p {
     font-size: small;
     line-height: 10px;
    }
+a {
+    font-size: small;
+}
 article {
     background-color: #CFC4C7;
     width: auto;
     border: 3px solid #9D9497;
     border-radius: 20px;
-    padding: 0px 15px;
+    padding: 5px 5px 10px 15px;
     margin: 15px;
   }
 
