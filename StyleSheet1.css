@@ -28,11 +28,7 @@ video {
     width: 100%    !important;
     height: auto   !important;
   }
-audio {
-    display: block;
-    margin: 0 auto;
-  }
-#myCanvas, #myCanvas2, #myCanvas3 {
+audio, #myCanvas, #myCanvas2, #myCanvas3 {
     display: block;
     margin: 0 auto;
   }
