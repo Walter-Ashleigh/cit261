@@ -21,31 +21,15 @@
             <source src="../cit261/Storm_Warning.mp4" type="video/mp4">
             Your browser does not support the video tag.
             </video>
-            <p>Code:</p>
-            <!-- HTML generated using hilite.me -->
-            <div style="background: #eeeedd; overflow:auto;width:auto;border:solid gray;
-            border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">
-            <span style="color: #8B008B; font-weight: bold">&lt;video</span> 
-            <span style="color: #658b00">width=</span>
-            <span style="color: #CD5555">&quot;300&quot;</span> 
-            <span style="color: #658b00">controls</span>
-            <span style="color: #8B008B; font-weight: bold">&gt;</span>
-            <span style="color: #8B008B; font-weight: bold">&lt;source</span> 
-            <span style="color: #658b00">src=</span>
-            <span style="color: #CD5555">&quot;../cit261/Storm_Warning.mp4&quot;</span> 
-            <span style="color: #658b00">type=</span>
-            <span style="color: #CD5555">&quot;video/mp4&quot;</span>
-            <span style="color: #8B008B; font-weight: bold">&gt;</span>
-            Your browser does not support the video tag.
-            <span style="color: #8B008B; font-weight: bold">&lt;/video&gt;</span>
+            <p>HTML:</p>
+            <!-- HTML generated using hilite.me --><div style="background: #eeeedd; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #8B008B; font-weight: bold">&lt;video</span> <span style="color: #658b00">width=</span><span style="color: #CD5555">&quot;300&quot;</span> <span style="color: #658b00">controls</span><span style="color: #8B008B; font-weight: bold">&gt;</span>
+                <span style="color: #8B008B; font-weight: bold">&lt;source</span> <span style="color: #658b00">src=</span><span style="color: #CD5555">&quot;../cit261/Storm_Warning.mp4&quot;</span> <span style="color: #658b00">type=</span><span style="color: #CD5555">&quot;video/mp4&quot;</span><span style="color: #8B008B; font-weight: bold">&gt;</span>
+                Your browser does not support the video tag.
+                <span style="color: #8B008B; font-weight: bold">&lt;/video&gt;</span>
             </pre></div>
         </div>
         <div>
             <h1>Audio</h1>
-            <audio controls loop>
-            <source src="../cit261/Night_Sounds_Crickets.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-            </audio>     
             <p>The audio tag defines sounds or other audio streams.  There are three supported
                     file formats: MP3, WAV and OGG.  MP3 is supported on more browsers than the other
                     two formats. If you place text between the opening and closing audio tags, that text 
@@ -54,7 +38,17 @@
                     the controls attribute to add audio controls to play, pause, adjust volume, loop, etc. 
                     The audio tag defines the sound content and the source tag defines the resources for 
                     the element.
-            </p>      
+            </p>     
+            <audio controls loop>
+            <source src="../cit261/Night_Sounds_Crickets.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+            </audio>     
+            <p>HTML:</p> 
+            <!-- HTML generated using hilite.me --><div style="background: #eeeedd; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">            <span style="color: #8B008B; font-weight: bold">&lt;audio</span> <span style="color: #658b00">controls</span> <span style="color: #658b00">loop</span><span style="color: #8B008B; font-weight: bold">&gt;</span>
+                <span style="color: #8B008B; font-weight: bold">&lt;source</span> <span style="color: #658b00">src=</span><span style="color: #CD5555">&quot;../cit261/Night_Sounds_Crickets.mp3&quot;</span> <span style="color: #658b00">type=</span><span style="color: #CD5555">&quot;audio/mpeg&quot;</span><span style="color: #8B008B; font-weight: bold">&gt;</span>
+                Your browser does not support the audio element.
+                <span style="color: #8B008B; font-weight: bold">&lt;/audio&gt;</span> 
+            </pre></div>    
         </div>
         <div>
             <h1>Canvas</h1>
@@ -84,6 +78,22 @@
                     // a line to appear in canvas
                     ctx.stroke();
                 </script>
+                <p>JavaScript:</p>
+                <!-- HTML generated using hilite.me --><div style="background: #eeeedd; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">                    <span style="color: #228B22">// locate the canvas element</span>
+                    <span style="color: #8B008B; font-weight: bold">var</span> canvas = <span style="color: #658b00">document</span>.getElementById(<span style="color: #CD5555">&quot;myCanvas&quot;</span>);
+                    <span style="color: #228B22">// create a drawing object</span>
+                    <span style="color: #228B22">// getContext() is a built in html object with methods and properties</span>
+                    <span style="color: #228B22">// for drawing</span>
+                    <span style="color: #8B008B; font-weight: bold">var</span> ctx = canvas.getContext(<span style="color: #CD5555">&quot;2d&quot;</span>);
+                    <span style="color: #228B22">// begins path</span>
+                    ctx.beginPath();
+                    <span style="color: #228B22">// determines the size of the circle</span>
+                    ctx.arc(<span style="color: #B452CD">95</span>,<span style="color: #B452CD">50</span>,<span style="color: #B452CD">40</span>,<span style="color: #B452CD">0</span>,<span style="color: #B452CD">2</span>*<span style="color: #658b00">Math</span>.PI);
+                    <span style="color: #228B22">//changes the color of the line</span>
+                    ctx.strokeStyle = <span style="color: #CD5555">&#39;red&#39;</span>;
+                    <span style="color: #228B22">// a line to appear in canvas</span>
+                    ctx.stroke();
+                </pre></div>
             <br></br>
                 <canvas id="myCanvas2" width="200" height="200"
                 style="border:1px solid #f10606;">
