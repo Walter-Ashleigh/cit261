@@ -24,7 +24,7 @@ p {
      font-size: small;
      padding: 0px 0px 0px 10px;
    }
-article, header {
+article, header, div {
     background-color: #CFC4C7;
     width: auto;
     border: 3px solid #9D9497;

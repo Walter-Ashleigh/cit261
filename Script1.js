@@ -1,4 +1,4 @@
 // Onclick event
-function myOnclick() {
+function function() {
 	document.getElementById("demo").innerHTML = "You clicked my button!";
 }

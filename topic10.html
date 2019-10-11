@@ -7,31 +7,12 @@
     <meta name="viewport" content="width=device-width,
     initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="StyleSheet1.css">
-    <script src="Script1.js"></script>
-    <style> 
-    body {
-        max-width: 600px;
-    }
-        #myDIV {
-            border: 1px solid black;
-            background-color: lightblue;
-            width: 270px;
-            height: 200px;
-            overflow: auto;
-        }
-            
-        #myDIV:hover {
-            background-color: coral;
-            width: 570px;
-            height: 500px;
-            padding: 100px;
-            border-radius: 50px;
-        }
-    </style>
+    <script src="topic10.js"></script>
 </head>
 <body>
     <main>
-        <p>
+        <header>HTML5 Tags for Media</header>
+        <div>
             <p>The video tag specifies movie clips or other types of video streams.
                 The supported file formats are: MP4, WebM and OGG.  MP4 is most widely used because
                 it's supported by more browser types.
@@ -41,9 +22,8 @@
             Your browser does not support the video tag.
             </video>
             
-        </p>
-
-        <p>
+        </div>
+        <div>
             <p>The audio tag defines sounds or other audio streams.  There are three supported
                 file formats: MP3, WAV and OGG.  MP3 is supported on more browsers than the other
                 two formats. If you place text between the opening and closing audio tags, that text 
@@ -53,17 +33,12 @@
                 The audio tag defines the sound content and the source tag defines the resources for 
                 the element.
             </p>
-            
             <audio controls loop>
             <source src="../cit261/Night_Sounds_Crickets.mp3" type="audio/mpeg">
             Your browser does not support the audio element.
-            </audio>
-                      
-            <p></p>
-                      
-        </p>
-
-        <p>
+            </audio>           
+        </div>
+        <div>
             <p>The canvas tag is used to draw graphics on a page via scripting.
                 The element itself is only a container and in order for graphics to be displayed
                 you must use a script to draw the graphics.  There's several methods for drawing 
@@ -79,62 +54,14 @@
             </p>
                 <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;">
                 Your browser does not support the canvas element.</canvas>
-                <script>
-                // locate the canvas element
-                var canvas = document.getElementById("myCanvas");
-                // create a drawing object
-                // getContext() is a built in html object with methods and properties
-                // for drawing
-                var ctx = canvas.getContext("2d");
-                // begins path
-                ctx.beginPath();
-                // determines the size of the circle
-                ctx.arc(95,50,40,0,2*Math.PI);
-                //changes the color of the line
-                ctx.strokeStyle = 'pink';
-                // a line to appear in canvas
-                ctx.stroke();
-                </script>
-                <br></br>
-
-<canvas id="myCanvas2" width="200" height="200"
-style="border:1px solid #d3d3d3;">
-Your browser does not support the canvas element.
-</canvas>
-
-<script>
-                // locate the canvas element
-                var canvas = document.getElementById("myCanvas2");
-                // create a drawing object
-                // getContext() is a built in html object with methods and properties
-                // for drawing
-                var ctx = canvas.getContext("2d");
-                // the fillStyle property fills in the object
-                // can be a color, gradient or pattern
-                ctx.fillStyle = "#FF0000";
-                // fillRect(x, y, width, height) draws a rectangle filled with the 
-                // fillStyle
-                ctx.fillRect(50, 50, 100, 100);
-</script>
-
-<br></br>
-<canvas id="myCanvas3" width="300" height="200" style="border:1px solid #000000;">
-Your browser does not support the canvas element.
-</canvas>
-
-<script>
-var canvas = document.getElementById("myCanvas3");
-var ctx=canvas.getContext("2d");
-ctx.font="30px Comic Sans MS";
-ctx.fillStyle = "white";
-ctx.textAlign = "center";
-ctx.fillText("Check out my text!", canvas.width/2, canvas.height/2);
-</script>
-                
-                <p></p>
-                
-                </body>
-        </p>
+            <br></br>
+                <canvas id="myCanvas2" width="200" height="200"
+                style="border:1px solid #d3d3d3;">
+                Your browser does not support the canvas element.</canvas>
+            <br></br>
+                <canvas id="myCanvas3" width="300" height="200" style="border:1px solid #000000;">
+                Your browser does not support the canvas element.</canvas>
+        </div>
     </main>
 </body>
 </html>
