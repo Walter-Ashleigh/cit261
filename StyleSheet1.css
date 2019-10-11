@@ -1,13 +1,18 @@
 ﻿body {
+    max-width: 500px;
     background-image: url('../cit261/seamless_floral.jpg');
     background-color: slategrey;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: ;
     font-size: 18px;
 }
+ h1 {
+    font-family: cinzel;
+    }
 article {
     background-color: #CFC4C7;
-    width: 300px;
-    border: 15px solid green;
-    padding: 50px;
-    margin: 20px;
+    width: fit-content;
+    border: 3px solid #9D9497;
+    border-radius: 20px;
+    padding: 0px 15px;
+    margin: 15px;
   }
