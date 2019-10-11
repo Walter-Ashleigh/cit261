@@ -12,17 +12,19 @@ h1 {
 p {
     font-family: sans-serif;
     font-size: small;
-    line-height: 10px;
+    line-height: 13px;
+    text-align: center;
    }
-a {
-    font-size: small;
-}
+   a{
+     font-size: small;
+     padding: 0px 0px 0px 10px;
+   }
 article {
     background-color: #CFC4C7;
     width: auto;
     border: 3px solid #9D9497;
     border-radius: 20px;
-    padding: 5px 5px 10px 15px;
+    padding: 5px 5px 10px 5px;
     margin: 15px;
   }
 
