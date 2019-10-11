@@ -6,6 +6,7 @@
 body {
     max-width: 500px;
     background-image: url('../cit261/dark.jpg');
+    background-attachment: fixed;
     background-color: #EFF0EB;
 }
 h1 {
