@@ -7,7 +7,7 @@ body {
     max-width: 500px;
     background-image: url('../cit261/watercolor-floral.jpg');
     background-attachment: fixed;
-    background-color: #EFF0EB;
+    background-color: #FFFFF4;
 }
 h1 {
     font-family: cinzel;
@@ -34,9 +34,9 @@ audio, #myCanvas, #myCanvas2, #myCanvas3 {
     margin: 0 auto;
   }
 article, header, div {
-    background-color: #CFC4C7;
+    background-color: #99B190;
     width: auto;
-    border: 3px solid #9D9497;
+    border: 3px solid #627148;
     border-radius: 20px;
     padding: 5px 5px 10px 5px;
     margin: 15px;
