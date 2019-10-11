@@ -7,14 +7,6 @@
     <meta name="viewport" content="width=device-width,
     initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="StyleSheet1.css">
-    <script>
-        var canvas3 = document.getElementById("myCanvas3");
-        var ctx=canvas3.getContext("2d");
-        ctx.font="30px Comic Sans MS";
-        ctx.fillStyle = "white";
-        ctx.textAlign = "center";
-        ctx.fillText("Check out my text!", canvas3.width/2, canvas3.height/2);
-    </script>
 </head>
 <body>
     <main>
@@ -66,8 +58,16 @@
                 style="border:1px solid #d3d3d3;">
                 Your browser does not support the canvas element.</canvas>
             <br></br>
-                <canvas id="myCanvas3" width="300" height="200" style="border:1px solid #000000;">
+                <canvas id="myCanvas3" width="200" height="200" style="border:1px solid #000000;">
                 Your browser does not support the canvas element.</canvas>
+                <script>
+                        var canvas = document.getElementById("myCanvas3");
+                        var ctx=canvas.getContext("2d");
+                        ctx.font="30px Comic Sans MS";
+                        ctx.fillStyle = "white";
+                        ctx.textAlign = "center";
+                        ctx.fillText("Hello!!", canvas.width/2, canvas.height/2);
+                </script>
         </div>
     </main>
 </body>
