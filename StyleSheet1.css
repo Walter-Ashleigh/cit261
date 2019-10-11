@@ -2,7 +2,8 @@
     max-width: 500px;
     background-image: url('../cit261/seamless_floral.jpg');
     background-color: slategrey;
-    font-family: ;
+    font-family: sans-serif;
+    font-weight: lighter;
     font-size: 18px;
 }
  h1 {
