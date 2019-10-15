@@ -38,39 +38,24 @@ localStorage.clear();
             <h1>Storing and Retrieving Data</h1>
                 <fieldset>
                     <legend>Example</legend>
-                <p>Select Your Age Range:&nbsp;</p>
-                    <label><input type="radio" name="age" id="age1" value="youngest" onclick="checked()"> 0-17</label>
-                    <label><input type="radio" name="age" id="age2" value="younger"onclick="checked()"> 18-29</label>
-                    <label><input type="radio" name="age" id="age3" value="older" onclick="checked()"> 30-49</label>
-                    <label><input type="radio" name="age" id="age4" value="oldest" onclick="checked()"> 50+</label>
+                <p>What's My Favorite Holiday?:&nbsp;</p>
+                    <label><input type="radio" name="holiday" id="christmas" onclick="addToStorage()">
+                    Select the button to add my favorite holiday to the local storage</label>
                     <br></br>
-                    <button onclick="readValue()">Get your age Range</button>
-                    <p id="demo"></p>
+                    <button onclick="readValue()"></button>
+                    <p id="displayHoliday"></p>
                 </fieldset>
             <script>
-                function checked {
-                if (document.getElementById("age1").checked)
-                {
-                    localStorage.setItem("YourAge", "Youngest");
+                function addToStorage {
+                    localStorage.setItem("Holiday", "Christmas");
                 }
-                if (document.getElementById("age2").checked)
-                {
-                    localStorage.setItem("YourAge", "Younger");
-                }
-                if (document.getElementById("age3").checked)
-                {
-                    localStorage.setItem("YourAge", "Older");
-                }
-                if (document.getElementById("age4").checked)
-                {
-                    localStorage.setItem("YourAge", "Oldest");
-                }
-                }
+
                 //document.getElementById('item').value
 
                 function readValue() {
-                  var x = localStorage.getItem("YourAge");
-                  document.getElementById("demo").innerHTML = x;
+                  var x = localStorage.getItem("Holiday");
+
+                  document.getElementById("displayHoliday").innerHTML = x;
                 } 
             </script>
         </div>
