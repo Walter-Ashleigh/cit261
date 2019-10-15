@@ -37,11 +37,12 @@ localStorage.clear();
         <div>
             <h1>Storing and Retrieving Data</h1>
             <p>Example:</p>
+            <form name="frm1" method="post" onsubmit="createItems()"></form>
             Enter an item: <input type="text" name="storage" id="item" placeholder="Add an item"><br>
-            <button onclick="createItems()">Add to Storage</button>
+            <input type="submit" value="Add to Storage">
 
             <p>Click the button to display all items:</p>
-            <button onclick="displayItems()">Display items</button>
+            <button onclick="getAllItems()">Display items</button>
 
 <p id="demo"></p>
             <script>
@@ -54,11 +55,28 @@ localStorage.clear();
                   document.getElementById("demo2").innerHTML = x;
                 } 
 
+                if (typeof(Storage) !== "undefined") {  
+   // Add code for storing value
+} else {  
+   // Alert to user that storage is not supported
+
+}  
 function createItems() {
   //localStorage.setItem("mytime", Date.now());
   //localStorage.setItem("myname", "John");
   //localStorage.setItem("myage", 36);
-  document.getElementById('item').value = localStorage.setItem("myItem", "value");
+  //document.getElementById('item').value = localStorage.setItem("myItem", "value");
+  // Store  
+localStorage.setItem("eName", "Manas"); 
+
+// Retrieve  
+document.getElementById("item").innerHTML = localStorage.getItem("eName"); 
+
+var namesArr = [];  
+namesArr.push('Manas'); //Add the text 'item1' to nameArr
+localStorage.setItem('names', JSON.stringify(namesArr)); 
+
+var storedNames = JSON.parse(localStorage.getItem("names")); 
 }
 
 function displayItems() {
@@ -69,6 +87,15 @@ function displayItems() {
   document.getElementById("demo").innerHTML += x + "<br>";
   }
 }
+
+function getAllItems()  
+{    
+    for (i = 0; i <= localStorage.length-1; i++)    
+    {     
+        key = sessionStorage.key(i);    
+        val = sessionStorage.getItem(key);     
+    }   
+}  
             </script>
         </div>
     </main>
