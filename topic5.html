@@ -38,7 +38,6 @@
             x = localStorage.key(i);
             y = localStorage.getItem(x);
             document.getElementById("demo").innerHTML += x + " : " + y +"<br>";
-            document.getElementById("demo2").innerHTML += y + "<br>";
             }
         }
     </script>
@@ -73,7 +72,7 @@ localStorage.clear();
             <h1>Storing and Retrieving Data</h1>
             <fieldset>
                 <legend>Example</legend>
-            <p>What's My Favorite Holiday?:&nbsp;</p>
+                <p>What's My Favorite Holiday?:&nbsp;</p>
                 <label><input type="radio" name="holiday" id="christmas" onfocus="addToStorage()">
                 Christmas</label>
                 <label><input type="radio" name="holiday" id="halloween" onfocus="addToStorage()">
@@ -83,12 +82,13 @@ localStorage.clear();
                 <p id="displayHoliday"></p>
             </fieldset>
             <p>Not sure why I can't get this to work.... ^^^</p>
-            <p>Working example with pre-selected storage items:</p>
-            <button onclick="createItems()">Create local storage items</button>
-            <br></br>
-            <button onclick="displayItems()">Display items</button>
-            <p id="demo"></p>
-            <p id="demo2"></p>
+            <fieldset>
+                <legend>Working example with pre-selected storage items:</legend>
+                <button onclick="createItems()">Create local storage items</button>
+                <br></br>
+                <button onclick="displayItems()">Display items</button>
+                <p id="demo"></p>
+            </fieldset>
         </div>
     </main>
 </body>
