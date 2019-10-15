@@ -42,7 +42,7 @@
             document.getElementById("displayItems").innerHTML += x + " : " + y +"<br>";
             }
         }
-         function test1 {
+         function test1() {
             var array = [];  
             array.push('Ashleigh'); //Add the text first place in array
             localStorage.setItem('groupMembers', JSON.stringify(array)); 
@@ -50,7 +50,7 @@
             var names = JSON.parse(localStorage.getItem("groupMembers")); 
          }
 
-         function test2 {
+         function test2() {
             for (i = 0; i <= localStorage.length-1; i++)    
             {     
                 x = localStorage.key(i);    
