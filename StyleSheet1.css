@@ -42,4 +42,9 @@ article, header, div {
     padding: 5px 5px 10px 5px;
     margin: 15px;
   }
+.align-center {
+    display: block;
+    margin: 1.0em auto;
+    text-align: center;
+  }  
 
