@@ -39,10 +39,10 @@ localStorage.clear();
                 <fieldset>
                     <legend>Example</legend>
                 <p>What's My Favorite Holiday?:&nbsp;</p>
-                    <label><input type="radio" name="holiday" id="christmas" onclick="addToStorage()">
+                    <label onclick="addToStorage()"><input type="radio" name="holiday" id="christmas">
                     Select the button to add my favorite holiday to the local storage</label>
                     <br></br>
-                    <button onclick="readValue()"></button>
+                    <button onclick="readValue()">And my favorite holiday is...</button>
                     <p id="displayHoliday"></p>
                 </fieldset>
             <script>
