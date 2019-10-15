@@ -9,19 +9,19 @@
     <link rel="stylesheet" type="text/css" href="StyleSheet1.css">
     <script>
         function addToStorage() {
-         var x; 
+          
          if (document.getElementById("christmas").checked) {
-            x = localStorage.setItem("Holiday", "Christmas");
+            localStorage.setItem("Holiday", "Christmas");
          }
          else if (document.getElementById("halloween").checked) {
-            x = localStorage.setItem("Holiday", "Halloween");
+            localStorage.setItem("Holiday", "Halloween");
          }
         }
 
         function readValue() {
           var x = localStorage.getItem("Holiday");
 
-          x = document.getElementById("displayHoliday").innerHTML;
+          document.getElementById("displayHoliday").innerHTML = x;
         } 
 
         localStorage.clear();
