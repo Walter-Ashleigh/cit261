@@ -23,7 +23,7 @@
 
           document.getElementById("displayHoliday").innerHTML = x;
         }
-        
+
         function createItems() {
             localStorage.setItem("mytime", Date.now());
             localStorage.setItem("myname", "John");
@@ -36,9 +36,8 @@
             for (i = 0; i < localStorage.length; i++) {
             x = localStorage.key(i);
             document.getElementById("demo").innerHTML += x + "<br>";
+            }
         }
-}
-        } 
     </script>
 </head>
 <body>
