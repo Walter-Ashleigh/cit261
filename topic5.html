@@ -8,6 +8,7 @@
     initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="StyleSheet1.css">
     <script>
+        // FUNCTION NOT WORKING
         function addToStorage() {
           
          if (document.getElementById("christmas").checked) {
@@ -17,13 +18,14 @@
             localStorage.setItem("Holiday", "Halloween");
          }
         }
-
+        // FUNCTION NOT WORKING
         function readValue() {
           var x = localStorage.getItem("Holiday");
 
           document.getElementById("displayHoliday").innerHTML = x;
         }
 
+        // WORKING FUNCTIONS BELOW
         function createItems() {
             localStorage.setItem("myname", "Ashleigh");
             localStorage.setItem("myage", "31");
@@ -33,13 +35,29 @@
 
         function displayItems() {
             var l, i;
-            document.getElementById("demo").innerHTML = "";
+            document.getElementById("displayItems").innerHTML = "";
             for (i = 0; i < localStorage.length; i++) {
             x = localStorage.key(i);
             y = localStorage.getItem(x);
-            document.getElementById("demo").innerHTML += x + " : " + y +"<br>";
+            document.getElementById("displayItems").innerHTML += x + " : " + y +"<br>";
             }
         }
+         function test1 {
+            var array = [];  
+            array.push('Ashleigh'); //Add the text first place in array
+            localStorage.setItem('groupMembers', JSON.stringify(array)); 
+
+            var names = JSON.parse(localStorage.getItem("groupMembers")); 
+         }
+
+         function test2 {
+            for (i = 0; i <= localStorage.length-1; i++)    
+            {     
+                x = localStorage.key(i);    
+                y = localStorage.getItem(x);     
+                document.getElementById("displayArrayItems").innerHTML += x + " : " + y +"<br>";
+            }   
+         }
     </script>
 </head>
 <body>
@@ -70,25 +88,32 @@ localStorage.clear();
         </div>
         <div>
             <h1>Storing and Retrieving Data</h1>
-            <fieldset class="align-center">
+            <fieldset>
                 <legend>Example</legend>
-                <p>What's My Favorite Holiday?:&nbsp;</p>
+                <p>What's My Favorite Holiday?</p>
                 <label><input type="radio" name="holiday" id="christmas" onfocus="addToStorage()">
                 Christmas</label>
                 <label><input type="radio" name="holiday" id="halloween" onfocus="addToStorage()">
                 Halloween</label>
                 <br></br>
-                <button onclick="readValue()">And my favorite holiday is...</button>
+                <button onclick="readValue()">Make Your Guess</button>
                 <p id="displayHoliday"></p>
             </fieldset>
             <p>Not sure why I can't get this to work.... ^^^</p>
-            <fieldset class="align-center">
+            <fieldset>
                 <legend>Working example with pre-selected storage items:</legend>
                 <button onclick="createItems()">Create local storage items</button>
                 <br></br>
-                <button onclick="displayItems()">Display items</button>
-                <p id="demo"></p>
+                <button onclick="displayItems()">Display the items</button>
+                <p id="displayItems"></p>
             </fieldset>
+            <fieldset>
+                    <legend>Example with array:</legend>
+                    <button onclick="test1()">Create local storage items</button>
+                    <br></br>
+                    <button onclick="test2()">Display the items</button>
+                    <p id="displayArrayItems"></p>
+                </fieldset>
         </div>
     </main>
 </body>
