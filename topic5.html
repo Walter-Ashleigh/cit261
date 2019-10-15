@@ -9,7 +9,13 @@
     <link rel="stylesheet" type="text/css" href="StyleSheet1.css">
     <script>
         function addToStorage() {
-         var x = localStorage.setItem("Holiday", "Christmas");
+         var x; 
+         if (document.getElementById("christmas").checked) {
+            localStorage.setItem("Holiday", "Christmas") = x;
+         }
+         else if (document.getElementById("halloween").checked) {
+            localStorage.setItem("Holiday", "Halloween") = x;
+         }
         }
 
             //document.getElementById('item').value
@@ -54,6 +60,8 @@ localStorage.clear();
                 <p>What's My Favorite Holiday?:&nbsp;</p>
                     <label><input type="radio" name="holiday" id="christmas" onfocus="addToStorage()">
                     Select the button to add my favorite holiday to the local storage</label>
+                    <label><input type="radio" name="holiday" id="halloween" onfocus="addToStorage()">
+                        Select the button to add my favorite holiday to the local storage 2</label>
                     <br></br>
                     <button onclick="readValue()">And my favorite holiday is...</button>
                     <p id="displayHoliday"></p>
