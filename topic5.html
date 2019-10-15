@@ -37,15 +37,23 @@ localStorage.clear();
         <div>
             <h1>Storing and Retrieving Data</h1>
             <p>Example:</p>
-            <form name="frm1" method="post" onsubmit="createItems()"></form>
-            Enter an item: <input type="text" name="storage" id="item" placeholder="Add an item"><br>
-            <input type="submit" value="Add to Storage">
-
-            <p>Click the button to display all items:</p>
-            <button onclick="getAllItems()">Display items</button>
-
-<p id="demo"></p>
+            <form action="#" method="post" class="myForm" id="myForm">
+                    <fieldset>
+                        <legend>Demo: Get Value Onclick</legend>
+                    
+                    <p>Select your size:&nbsp;
+                        <label><input type="radio" name="size" value="5" /> Small</label>
+                        <label><input type="radio" name="size" value="8" checked="checked" /> Medium</label>
+                        <label><input type="radio" name="size" value="12" /> Large</label>
+                    </p>
+                    
+                    <p>
+                        <label>Total: $ <input type="text" name="total" class="num" value="8" readonly="readonly" /></label>
+                    </p>
+                    </fieldset>
+                </form>>
             <script>
+
                 //document.getElementById('item').value
                 function createItem() {
                   localStorage.setItem("myName", "Ashleigh");
@@ -54,48 +62,6 @@ localStorage.clear();
                   var x = localStorage.getItem("myName");
                   document.getElementById("demo2").innerHTML = x;
                 } 
-
-                if (typeof(Storage) !== "undefined") {  
-   // Add code for storing value
-} else {  
-   // Alert to user that storage is not supported
-
-}  
-function createItems() {
-  //localStorage.setItem("mytime", Date.now());
-  //localStorage.setItem("myname", "John");
-  //localStorage.setItem("myage", 36);
-  //document.getElementById('item').value = localStorage.setItem("myItem", "value");
-  // Store  
-localStorage.setItem("eName", "Manas"); 
-
-// Retrieve  
-document.getElementById("item").innerHTML = localStorage.getItem("eName"); 
-
-var namesArr = [];  
-namesArr.push('Manas'); //Add the text 'item1' to nameArr
-localStorage.setItem('names', JSON.stringify(namesArr)); 
-
-var storedNames = JSON.parse(localStorage.getItem("names")); 
-}
-
-function displayItems() {
-  var l, i;
-  document.getElementById("demo").innerHTML = "";
-  for (i = 0; i < localStorage.length; i++) {
-  x = localStorage.key(i);
-  document.getElementById("demo").innerHTML += x + "<br>";
-  }
-}
-
-function getAllItems()  
-{    
-    for (i = 0; i <= localStorage.length-1; i++)    
-    {     
-        key = sessionStorage.key(i);    
-        val = sessionStorage.getItem(key);     
-    }   
-}  
             </script>
         </div>
     </main>
