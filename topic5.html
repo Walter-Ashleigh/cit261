@@ -25,7 +25,6 @@
         }
 
         function createItems() {
-            localStorage.setItem("mytime", Date.now());
             localStorage.setItem("myname", "Ashleigh");
             localStorage.setItem("myage", "31");
             localStorage.setItem("mycity", "Melbourne");
@@ -33,7 +32,7 @@
         }
 
         function displayItems() {
-            var l, i, y;
+            var l, i;
             document.getElementById("demo").innerHTML = "";
             for (i = 0; i < localStorage.length; i++) {
             x = localStorage.key(i);
