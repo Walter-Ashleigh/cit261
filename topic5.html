@@ -44,17 +44,20 @@
         }
          function test1() {
             var array = [];  
-            array.push('Ashleigh'); //Add the text first place in array
-            localStorage.setItem('groupMembers', JSON.stringify(array)); 
+            array.push("Ashleigh"); //Add the text first place in array
+            array.push("Joseph");
+            array.push("Laura");
+            localStorage.setItem("groupMembers", JSON.stringify(array)); 
 
             var names = JSON.parse(localStorage.getItem("groupMembers")); 
          }
 
          function test2() {
-            for (i = 0; i <= localStorage.length-1; i++)    
+            //for (i = 0; i <= localStorage.length-1; i++)  
+            for (i = 0; i < localStorage.length; i++)  
             {     
-                x = localStorage.key(i);    
-                y = localStorage.getItem(x);     
+                k = localStorage.key(i);    
+                v = localStorage.getItem(k);     
                 document.getElementById("displayArrayItems").innerHTML += x + " : " + y +"<br>";
             }   
          }
