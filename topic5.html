@@ -37,7 +37,7 @@
             document.getElementById("demo").innerHTML = "";
             for (i = 0; i < localStorage.length; i++) {
             x = localStorage.key(i);
-            y = localStorage.getItem(i);
+            y = localStorage.getItem(localStorage.key(i));
             document.getElementById("demo").innerHTML += x + "<br>";
             document.getElementById("demo2").innerHTML += y + "<br>";
             }
