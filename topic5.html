@@ -7,6 +7,19 @@
     <meta name="viewport" content="width=device-width,
     initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="StyleSheet1.css">
+    <script>
+        function addToStorage {
+            localStorage.setItem("Holiday", "Christmas");
+        }
+
+            //document.getElementById('item').value
+
+        function readValue() {
+          var x = localStorage.getItem("Holiday");
+
+          document.getElementById("displayHoliday").innerHTML = x;
+        } 
+    </script>
 </head>
 <body>
     <main>
@@ -45,19 +58,6 @@ localStorage.clear();
                     <button onclick="readValue()">And my favorite holiday is...</button>
                     <p id="displayHoliday"></p>
                 </fieldset>
-            <script>
-                function addToStorage {
-                    localStorage.setItem("Holiday", "Christmas");
-                }
-
-                //document.getElementById('item').value
-
-                function readValue() {
-                  var x = localStorage.getItem("Holiday");
-
-                  document.getElementById("displayHoliday").innerHTML = x;
-                } 
-            </script>
         </div>
     </main>
 </body>
