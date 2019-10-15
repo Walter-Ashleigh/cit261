@@ -34,6 +34,42 @@ localStorage.removeItem(<span style="color: #CD5555">&#39;myName&#39;</span>);
 localStorage.clear();
 </pre></div>
         </div>
+        <div>
+            <h1>Storing and Retrieving Data</h1>
+            <p>Example:</p>
+            Enter an item: <input type="text" name="storage" id="item" value="input"><br>
+            <button onclick="createItems()">Add to Storage</button>
+
+            <p>Click the button to display all items:</p>
+            <button onclick="displayItems()">Display items</button>
+
+<p id="demo"></p>
+            <script>
+                //document.getElementById('item').value
+                function createItem() {
+                  localStorage.setItem("myName", "Ashleigh");
+                } 
+                function readValue() {
+                  var x = localStorage.getItem("myName");
+                  document.getElementById("demo2").innerHTML = x;
+                } 
+
+function createItems() {
+  localStorage.setItem("mytime", Date.now());
+  localStorage.setItem("myname", "John");
+  localStorage.setItem("myage", 36);
+}
+
+function displayItems() {
+  var l, i;
+  document.getElementById("demo").innerHTML = "";
+  for (i = 0; i < localStorage.length; i++) {
+  x = localStorage.key(i);
+  document.getElementById("demo").innerHTML += x + "<br>";
+  }
+}
+            </script>
+        </div>
     </main>
 </body>
 </html>
