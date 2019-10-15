@@ -23,6 +23,8 @@
 
           x = document.getElementById("displayHoliday").innerHTML;
         } 
+
+        localStorage.clear();
     </script>
 </head>
 <body>
@@ -56,9 +58,9 @@ localStorage.clear();
                 <fieldset>
                     <legend>Example</legend>
                 <p>What's My Favorite Holiday?:&nbsp;</p>
-                    <label><input type="checkbox" name="holiday" id="christmas" onclick="addToStorage()">
+                    <label><input type="radio" name="holiday" id="christmas" onfocus="addToStorage()">
                     Christmas</label>
-                    <label><input type="checkbox" name="holiday" id="halloween" onclick="addToStorage()">
+                    <label><input type="radio" name="holiday" id="halloween" onfocus="addToStorage()">
                     Halloween</label>
                     <br></br>
                     <button onclick="readValue()">And my favorite holiday is...</button>
