@@ -12,14 +12,27 @@
     <main>
         <header>Local Storage</header>
         <div>
-            <h1>Web Storage API - Local Storage</h1>
+            <h1>Web Storage API</h1>
             <p>Web storage API provides a way of storing data in a browser differently than 
                 when using cookies.  The localStorage property has no expiration date and will 
                 remain stored in the browser even after it's been closed. It also has the 
                 highest max storage limit compared to sessionStorage (in which the data is only
                 stored for a session) and cookies (which has the least amount of storage space).
-                <br></br>&bull; keys and values in localStorage will always be strings.
+                <br></br> Some things to remember: 
+                <br></br>&bull; Keys and values in localStorage will always be strings.
+                <br></br>&bull; With a storage object, you are able to set, retrieve and remove data.
+                <br></br>&bull; The syntax for the local storage object: myStorage = window.localStorage;
             </p>
+            <p>A few ways to use the localStorage property:</p>
+            <!-- HTML generated using hilite.me --><div style="background: #eeeedd; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #228B22">// Set an item</span>
+localStorage.setItem(<span style="color: #CD5555">&quot;myName&quot;</span>, <span style="color: #CD5555">&quot;Ashleigh&quot;</span>);
+<span style="color: #228B22">// Retrieve an item</span>
+<span style="color: #8B008B; font-weight: bold">var</span> cat = localStorage.getItem(<span style="color: #CD5555">&#39;myName&#39;</span>);
+<span style="color: #228B22">// Remove an item</span>
+localStorage.removeItem(<span style="color: #CD5555">&#39;myName&#39;</span>);
+<span style="color: #228B22">// Clear all items</span>
+localStorage.clear();
+</pre></div>
         </div>
     </main>
 </body>
