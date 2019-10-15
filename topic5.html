@@ -38,7 +38,8 @@
             for (i = 0; i < localStorage.length; i++) {
             x = localStorage.key(i);
             y = localStorage.getItem(i);
-            document.getElementById("demo").innerHTML += x + y + "<br>";
+            document.getElementById("demo").innerHTML += x + "<br>";
+            document.getElementById("demo2").innerHTML += y + "<br>";
             }
         }
     </script>
@@ -88,6 +89,7 @@ localStorage.clear();
             <br></br>
             <button onclick="displayItems()">Display items</button>
             <p id="demo"></p>
+            <p id="demo2"></p>
         </div>
     </main>
 </body>
