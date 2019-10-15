@@ -39,30 +39,32 @@ localStorage.clear();
                 <fieldset>
                     <legend>Example</legend>
                 <p>Select Your Age Range:&nbsp;</p>
-                    <label><input type="radio" name="age" id="age1" value="youngest"> 0-17</label>
-                    <label><input type="radio" name="age" id="age2" value="younger"> 18-29</label>
-                    <label><input type="radio" name="age" id="age3" value="older"> 30-49</label>
-                    <label><input type="radio" name="age" id="age4" value="oldest"> 50+</label>
+                    <label><input type="radio" name="age" id="age1" value="youngest" onclick="checked()"> 0-17</label>
+                    <label><input type="radio" name="age" id="age2" value="younger"onclick="checked()"> 18-29</label>
+                    <label><input type="radio" name="age" id="age3" value="older" onclick="checked()"> 30-49</label>
+                    <label><input type="radio" name="age" id="age4" value="oldest" onclick="checked()"> 50+</label>
                     <br></br>
                     <button onclick="readValue()">Get your age Range</button>
                     <p id="demo"></p>
                 </fieldset>
             <script>
+                function checked {
                 if (document.getElementById("age1").checked)
                 {
                     localStorage.setItem("YourAge", "Youngest");
                 }
-                else if (document.getElementById("age2").checked)
+                if (document.getElementById("age2").checked)
                 {
                     localStorage.setItem("YourAge", "Younger");
                 }
-                else if (document.getElementById("age3").checked)
+                if (document.getElementById("age3").checked)
                 {
                     localStorage.setItem("YourAge", "Older");
                 }
-                else (document.getElementById("age4").checked)
+                if (document.getElementById("age4").checked)
                 {
                     localStorage.setItem("YourAge", "Oldest");
+                }
                 }
                 //document.getElementById('item').value
 
