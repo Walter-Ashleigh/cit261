@@ -36,26 +36,26 @@ localStorage.clear();
         </div>
         <div>
             <h1>Storing and Retrieving Data</h1>
-            <p>Example:</p>
-            <form action="#" method="post" class="myForm" id="myForm">
-                    <fieldset>
-                        <legend>Demo: Get Value Onclick</legend>
-                    
-                    <p>Select your size:&nbsp;
-                        <label><input type="radio" name="size" value="5" /> Small</label>
-                        <label><input type="radio" name="size" value="8" checked="checked" /> Medium</label>
-                        <label><input type="radio" name="size" value="12" /> Large</label>
-                    </p>
-                    
-                    <p>
-                        <label>Total: $ <input type="text" name="total" class="num" value="8" readonly="readonly" /></label>
-                    </p>
-                    </fieldset>
-                </form>>
+                <fieldset>
+                    <legend>Example</legend>
+                <p>Select Your Age Range:&nbsp;
+                <form action="#" method="POST" name="myForm" id="myForm">
+                    <label><input type="radio" name="age" id="age1" value="youngest"> 0-17</label>
+                    <label><input type="radio" name="age" id="age2" value="younger"> 18-29</label>
+                    <label><input type="radio" name="age" id="age3" value="older"> 30-49</label>
+                    <label><input type="radio" name="age" id="age4" value="oldest"> 50+</label>
+                </form>
+                </p>
+                </fieldset>
             <script>
-
+                var age = document.forms[myForm].elements[age];
+                for (var i=0, len=age.length; i<len; i++){ age[i].onclick = function selectAge() {
+                    this.form.elements.age.value = this.value;
+                };
+                }
                 //document.getElementById('item').value
                 function createItem() {
+
                   localStorage.setItem("myName", "Ashleigh");
                 } 
                 function readValue() {
