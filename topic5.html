@@ -37,7 +37,7 @@ localStorage.clear();
         <div>
             <h1>Storing and Retrieving Data</h1>
             <p>Example:</p>
-            Enter an item: <input type="text" name="storage" id="item" value="input"><br>
+            Enter an item: <input type="text" name="storage" id="item" placeholder="Add an item"><br>
             <button onclick="createItems()">Add to Storage</button>
 
             <p>Click the button to display all items:</p>
@@ -55,9 +55,10 @@ localStorage.clear();
                 } 
 
 function createItems() {
-  localStorage.setItem("mytime", Date.now());
-  localStorage.setItem("myname", "John");
-  localStorage.setItem("myage", 36);
+  //localStorage.setItem("mytime", Date.now());
+  //localStorage.setItem("myname", "John");
+  //localStorage.setItem("myage", 36);
+  document.getElementById('item').value = localStorage.setItem("myItem", "value");
 }
 
 function displayItems() {
