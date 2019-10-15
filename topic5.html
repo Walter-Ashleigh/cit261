@@ -44,13 +44,14 @@ localStorage.clear();
                     <label><input type="radio" name="age" id="age2" value="younger"> 18-29</label>
                     <label><input type="radio" name="age" id="age3" value="older"> 30-49</label>
                     <label><input type="radio" name="age" id="age4" value="oldest"> 50+</label>
+                    <label>You selected: <input type="text" name="yourAge" id="yourAge" value="0" readonly="readonly" /></label>
                 </form>
                 </p>
                 </fieldset>
             <script>
                 var age = document.forms[myForm].elements[age];
                 for (var i=0, len=age.length; i<len; i++){ age[i].onclick = function selectAge() {
-                    this.form.elements.age.value = this.value;
+                    this.form.elements.yourAge.value = this.value;
                 };
                 }
                 //document.getElementById('item').value
