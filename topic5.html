@@ -8,7 +8,7 @@
     initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="StyleSheet1.css">
     <script>
-        // FUNCTION NOT WORKING
+        // FUNCTION NOT WORKING ??
         function addToStorage() {
           
          if (document.getElementById("christmas").checked) {
@@ -18,7 +18,7 @@
             localStorage.setItem("Holiday", "Halloween");
          }
         }
-        // FUNCTION NOT WORKING
+        // FUNCTION NOT WORKING ??
         function readValue() {
           var x = localStorage.getItem("Holiday");
 
@@ -54,6 +54,10 @@
 
          function deleteItems() {
             localStorage.clear();
+         }
+
+         function removeOneItem() {
+            localStorage.removeItem("groupMembers");
          }
     </script>
 </head>
@@ -96,17 +100,16 @@ localStorage.clear();
                 <button onclick="readValue()">Make Your Guess</button>
                 <p id="displayHoliday"></p>
             </fieldset>
-            <p>Not sure why I can't get this to work.... ^^^</p>
             <fieldset>
                 <legend>Example:</legend>
                 <button onclick="createItems()">Create the Local Storage Items</button>
                 <br></br>
-                <button onclick="displayItems()">Display the items</button>
+                <button onclick="displayItems()">Display Items</button>
                 <p id="displayItems"></p>
-                <br></br>
                 <button onclick="addArray()">Create Items Using Array</button>
                 <br></br>
-                <button onclick="deleteItems()">Delete items</button>
+                <button onclick="removeOneItem()">Remove One Item</button>                
+                <button onclick="deleteItems()">Delete all Items</button>
             </fieldset>
         </div>
     </main>
