@@ -42,9 +42,9 @@
             document.getElementById("displayItems").innerHTML += x + " : " + y +"<br>";
             }
         }
-         function test1() {
+         function addArray() {
             var array = [];  
-            array.push("Ashleigh"); //Add the text first place in array
+            array.push("Ashleigh"); //Add to the array
             array.push("Joseph");
             array.push("Laura");
             localStorage.setItem("groupMembers", JSON.stringify(array)); 
@@ -52,27 +52,8 @@
             var names = JSON.parse(localStorage.getItem("groupMembers")); 
          }
 
-         function test2() {
-            //for (i = 0; i <= localStorage.length-1; i++)  
-            for (i = 0; i < localStorage.length; i++)  
-            {     
-                x = localStorage.key(i);    
-                y = localStorage.getItem(x);     
-                document.getElementById("displayArrayItems").innerHTML += x + " : " + y +"<br>";
-            }   
-         }
-
          function deleteItems() {
             localStorage.clear();
-         }
-
-         function displayRefreshed() {
-            var l, i;
-  document.getElementById("demo").innerHTML = "";
-  for (i = 0; i < localStorage.length; i++) {
-  x = localStorage.key(i);
-  document.getElementById("demo").innerHTML += x + "<br>";
-  }
          }
     </script>
 </head>
@@ -117,22 +98,16 @@ localStorage.clear();
             </fieldset>
             <p>Not sure why I can't get this to work.... ^^^</p>
             <fieldset>
-                <legend>Working example with pre-selected storage items:</legend>
-                <button onclick="createItems()">Create local storage items</button>
+                <legend>Example:</legend>
+                <button onclick="createItems()">Create the Local Storage Items</button>
                 <br></br>
                 <button onclick="displayItems()">Display the items</button>
                 <p id="displayItems"></p>
-            </fieldset>
-            <fieldset>
-                    <legend>Example with array:</legend>
-                    <button onclick="test1()">Create local storage items</button>
-                    <br></br>
-                    <button onclick="test2()">Display the items</button>
-                    <p id="displayArrayItems"></p>
-                </fieldset>
+                <br></br>
+                <button onclick="addArray()">Create Items Using Array</button>
+                <br></br>
                 <button onclick="deleteItems()">Delete items</button>
-                <button onclick="displayRefreshed()">Display (Shouldnt have anything now)</button>
-                <p id="demo">This should change to nothing</p>
+            </fieldset>
         </div>
     </main>
 </body>
