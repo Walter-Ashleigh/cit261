@@ -12,25 +12,25 @@
         function addToStorage() {
           
          if (document.getElementById("christmas").checked) {
-            localStorage.setItem("Holiday", "Christmas");
+            localStorage.setItem("holiday", "Christmas");
          }
          else if (document.getElementById("halloween").checked) {
-            localStorage.setItem("Holiday", "Halloween");
+            localStorage.setItem("holiday", "Halloween");
          }
         }
         // FUNCTION NOT WORKING ??
         function readValue() {
-          var x = localStorage.getItem("Holiday");
+          var x = localStorage.getItem("holiday");
 
           document.getElementById("displayHoliday").innerHTML = x;
         }
 
         // WORKING FUNCTIONS BELOW
         function createItems() {
-            localStorage.setItem("myname", "Ashleigh");
-            localStorage.setItem("myage", "31");
-            localStorage.setItem("mycity", "Melbourne");
-            localStorage.setItem("mystate", "Florida");
+            localStorage.setItem("myName", "Ashleigh");
+            localStorage.setItem("myAge", "31");
+            localStorage.setItem("myCity", "Melbourne");
+            localStorage.setItem("myState", "Florida");
         }
 
         function displayItems() {
@@ -110,7 +110,7 @@ localStorage.clear();
                 <br></br>
                 <button onclick="removeOneItem()">Remove the Array</button>  
                 <br></br>              
-                <button onclick="deleteItems()">Delete all Items</button>
+                <button onclick="deleteItems()">Delete All Items</button>
             </fieldset>
         </div>
     </main>
