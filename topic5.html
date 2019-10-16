@@ -61,6 +61,19 @@
                 document.getElementById("displayArrayItems").innerHTML += x + " : " + y +"<br>";
             }   
          }
+
+         function deleteItems() {
+            localStorage.clear();
+         }
+
+         function displayRefreshed() {
+            var l, i;
+  document.getElementById("demo").innerHTML = "";
+  for (i = 0; i < localStorage.length; i++) {
+  x = localStorage.key(i);
+  document.getElementById("demo").innerHTML += x + "<br>";
+  }
+         }
     </script>
 </head>
 <body>
@@ -117,6 +130,9 @@ localStorage.clear();
                     <button onclick="test2()">Display the items</button>
                     <p id="displayArrayItems"></p>
                 </fieldset>
+                <button onclick="deleteItems()">Delete items</button>
+                <button onclick="displayRefreshed()">Display (Shouldnt have anything now)</button>
+                <p id="demo">This should change to nothing</p>
         </div>
     </main>
 </body>
