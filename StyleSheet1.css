@@ -34,7 +34,7 @@ audio, #myCanvas, #myCanvas2, #myCanvas3 {
     display: block;
     margin: 0 auto;
   }
-article, header, div {
+article, header, div.style {
     background-color: #99B190;
     width: auto;
     border: 3px solid #627148;
