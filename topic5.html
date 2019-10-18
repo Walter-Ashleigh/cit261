@@ -8,7 +8,7 @@
     initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="StyleSheet1.css">
     <script>
-        // FUNCTION NOT WORKING ??
+        // FUNCTION FOR QUESTION
         function addToStorage() {
           
          if (document.getElementById("christmas").checked) {
@@ -18,14 +18,14 @@
             localStorage.setItem("holiday", "Halloween");
          }
         }
-        // FUNCTION NOT WORKING ??
+        // FUNCTION FOR QUESTION
         function readValue() {
           var x = localStorage.getItem("holiday");
 
           document.getElementById("displayHoliday").innerHTML = x;
         }
 
-        // WORKING FUNCTIONS BELOW
+        // THE REST OF THE MAIN EXAMPLE
         function createItems() {
             localStorage.setItem("myName", "Ashleigh");
             localStorage.setItem("myAge", "31");
@@ -90,18 +90,18 @@ localStorage.clear();
         <div>
             <h1>Storing and Retrieving Data</h1>
             <fieldset>
-                <legend>Example</legend>
-                <p>What's My Favorite Holiday?</p>
+                <legend>Example with User Input:</legend>
+                <p>What's Your Favorite Holiday?</p>
                 <label><input type="radio" name="holiday" id="christmas" onfocus="addToStorage()">
                 Christmas</label>
                 <label><input type="radio" name="holiday" id="halloween" onfocus="addToStorage()">
                 Halloween</label>
                 <br></br>
-                <button onclick="readValue()">Make Your Guess</button>
+                <button onclick="readValue()">Add to Storage and Display</button>
                 <p id="displayHoliday"></p>
             </fieldset>
             <fieldset>
-                <legend>Example:</legend>
+                <legend>Example Including Removing Items and Arrays:</legend>
                 <button onclick="createItems()">Create the Local Storage Items</button>
                 <br></br>
                 <button onclick="displayItems()">Display Items</button>
