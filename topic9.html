@@ -7,45 +7,33 @@
     <meta name="viewport" content="width=device-width,
     initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="StyleSheet1.css">
+    <style> 
+            #myDIV {
+              margin: 50px;
+              width: 300px;
+              height: 25px;
+              text-align: center;
+              background: red;
+              position: relative;
+              font-size: 20px;
+            }
+            
+            /* Chrome, Safari, Opera */
+            @-webkit-keyframes mymove {
+              from {top: 0px;}
+              to {top: 150px;}
+            }
+            /* Standard Syntax */
+            @keyframes mymove {
+              from {top: 0px;}
+              to {top: 150px;}
+            }
+            </style>
     <script>
         // first example
         function displayDate() {
             document.getElementById("date").innerHTML = Date();
         }
-
-        // animation example
-        var x = document.getElementById("animate");
-
-        // to start the animation
-        function theAnimation() {
-            x.style.WebkitAnimation = "mymove 4s 2"; // Code for Chrome, Safari and Opera
-            x.style.animation = "mymove 4s 2";     // Standard syntax
-        }
-
-        // Code for Chrome, Safari and Opera
-        x.addEventListener("webkitAnimationStart", myStartFunction);
-        x.addEventListener("webkitAnimationIteration", myRepeatFunction);
-        x.addEventListener("webkitAnimationEnd", myEndFunction);
-
-        // Standard syntax
-        x.addEventListener("animationstart", myStartFunction);
-        x.addEventListener("animationiteration", myRepeatFunction);
-        x.addEventListener("animationend", myEndFunction);
-
-function myStartFunction() {
-  this.innerHTML = "animationstart event occured - The animation has started";
-  this.style.backgroundColor = "pink";
-}
-
-function myRepeatFunction() {
-  this.innerHTML = "animationiteration event occured - The animation was played again";
-  this.style.backgroundColor = "lightblue";
-}
-
-function myEndFunction() {
-  this.innerHTML = "animationend event occured - The animation has completed";
-  this.style.backgroundColor = "lightgray";
-}
     </script>
 </head>
 <body>
@@ -96,6 +84,40 @@ function myEndFunction() {
             events. One the box below is clicked, it the animation will start, it will change again 
             while it's in transition and change one last time at the end of the animation.</p>
             <div id="animate" onclick="theAnimation()">Click Me!</div>
+            <script>
+                    var x = document.getElementById("myDIV");
+                    
+                    // Start the animation with JavaScript
+                    function myFunction() {
+                      x.style.WebkitAnimation = "mymove 4s 2"; // Code for Chrome, Safari and Opera
+                      x.style.animation = "mymove 4s 2";     // Standard syntax
+                    }
+                    
+                    // Code for Chrome, Safari and Opera
+                    x.addEventListener("webkitAnimationStart", myStartFunction);
+                    x.addEventListener("webkitAnimationIteration", myRepeatFunction);
+                    x.addEventListener("webkitAnimationEnd", myEndFunction);
+                    
+                    // Standard syntax
+                    x.addEventListener("animationstart", myStartFunction);
+                    x.addEventListener("animationiteration", myRepeatFunction);
+                    x.addEventListener("animationend", myEndFunction);
+                    
+                    function myStartFunction() {
+                      this.innerHTML = "animationstart event occured - The animation has started";
+                      this.style.backgroundColor = "pink";
+                    }
+                    
+                    function myRepeatFunction() {
+                      this.innerHTML = "animationiteration event occured - The animation was played again";
+                      this.style.backgroundColor = "lightblue";
+                    }
+                    
+                    function myEndFunction() {
+                      this.innerHTML = "animationend event occured - The animation has completed";
+                      this.style.backgroundColor = "lightgray";
+                    }
+                    </script>
         </div>
     </main>
 </body>
