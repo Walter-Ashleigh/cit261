@@ -7,78 +7,32 @@
     <meta name="viewport" content="width=device-width,
     initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="StyleSheet1.css">
-    <script src="Script1.js"></script>
-    <style> 
-        #myDIV {
-            border: 1px solid black;
-            background-color: lightblue;
-            width: 270px;
-            height: 200px;
-            overflow: auto;
-        }
-            
-        #myDIV:hover {
-            background-color: coral;
-            width: 570px;
-            height: 500px;
-            padding: 100px;
-            border-radius: 50px;
-        }
-    </style>
+    <script>
+    </script>
 </head>
 <body>
     <main>
-        <section>
-            <article>
-                <h1>JavaScript Events</h1>
-                <p>JavaScript is able to "react" on HTML events.
-                It allows you execute code when an event is detected.
-                <br></br>
-                This can be done using either single qoutations or double qoutations.
-                </p>
-                <br></br>
-                <p>An example being:
-                <br></br>
-                element event='some JavaScript' or
-                element event="some JavaScript"
-                </p>
-                <div>
-                    <h2>Onclick Event</h2>
-                    <p>This event occurs when an element is clicked on.
-                    </p>
-                    <button onclick="myFunction()">Click me</button>
-
-                    <p id="demo"></p>
-                            
-                    <script>
-                    function myFunction() {
-                    document.getElementById("demo").innerHTML = "You clicked my button!";
-                    }
-                    </script>
-                </div>
-                <div>
-                    <h2>Transition</h2>
-                    <p>This is an event and property.  You can use the 
-                    transitionend event to change the element once the transition completes.
-                    You can also use several transition properties to style the transition event.
-                    <br></br>
-                    The transition property is short for the following four properties:
-                    <br></br>
-                    transitionProperty, transitionDuration, transitionTimingFunction, and transitionDelay.
-                    </p>
-                    <button onclick="myFunction()">Try it</button>
-                    <div id="myDIV">
-                        <h1>myDIV</h1>
-                    </div>
-                    <script>
-                    function myFunction() {
-                    document.getElementById("myDIV").style.WebkitTransition = "all 2s"; // Code for Safari 3.1 to 6.0
-                    document.getElementById("myDIV").style.transition = "all 2s";     // Standard syntax
-                    }
-                    </script>
-                </div>
-            </article>
-        </section>
+        <header>JavaScript Events</header>
+        <div>
+            <h1>Events</h1>
+            <p>HTML events are things that happen to HTML elements.  It can be something the 
+            user does themselves, or something the broser does.  Javascript is able 
+            to react on the events. Event handlers make it so things happen when: a page loads,    
+            a button is clicked, the user inputs data, an object is moused over, you touch 
+            something on your mobile device, and many other things. 
+            </p>
+            <p>Methods are also used in order to allow the JavaScript to work with the events.  Event
+            attributes can call JavaScript functions, execute JavaScript code directly and impact  
+            how the events are handled or sent, to name a few. 
+            </p>
+            <p>An Event would be something like the following:
+            <br></br>
+            <li>&bull; onchange - when an element has changed</li>
+            <li>&bull; onclick - when a user clicks an element</li>
+            <li>&bull; onload - when the browser has fully loaded</li>
+            <li>&bull; onmouseover - when the mouse is moved over an element</li>
+            </p>
+        </div>
     </main>
 </body>
 </html>
