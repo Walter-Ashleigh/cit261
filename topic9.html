@@ -7,10 +7,67 @@
     <meta name="viewport" content="width=device-width,
     initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="StyleSheet1.css">
+    <style>
+        #animate {
+            text-align: center;
+            margin: 50px;
+            width: 300px;
+            height: 25px;
+            background: red;
+            position: relative;
+            font-size: 20px;
+            }
+
+            /* Chrome, Safari, Opera */
+            @-webkit-keyframes mymove {
+            from {top: 0px;}
+            to {top: 150px;}
+            }
+            /* Standard Syntax */
+            @keyframes mymove {
+            from {top: 0px;}
+            to {top: 150px;}
+            }
+    </style>
     <script>
+        // first example
         function displayDate() {
-          document.getElementById("date").innerHTML = Date();
+            document.getElementById("date").innerHTML = Date();
         }
+
+        // animation example
+        var x = document.getElementById("animate");
+
+        // to start the animation
+        function theAnimation() {
+            x.style.WebkitAnimation = "mymove 4s 2"; // Code for Chrome, Safari and Opera
+            x.style.animation = "mymove 4s 2";     // Standard syntax
+        }
+
+        // Code for Chrome, Safari and Opera
+        x.addEventListener("webkitAnimationStart", myStartFunction);
+        x.addEventListener("webkitAnimationIteration", myRepeatFunction);
+        x.addEventListener("webkitAnimationEnd", myEndFunction);
+
+        // Standard syntax
+        x.addEventListener("animationstart", myStartFunction);
+        x.addEventListener("animationiteration", myRepeatFunction);
+        x.addEventListener("animationend", myEndFunction);
+
+function myStartFunction() {
+  this.innerHTML = "animationstart event occured - The animation has started";
+  this.style.backgroundColor = "pink";
+}
+
+function myRepeatFunction() {
+  this.innerHTML = "animationiteration event occured - The animation was played again";
+  this.style.backgroundColor = "lightblue";
+}
+
+function myEndFunction() {
+  this.innerHTML = "animationend event occured - The animation has completed";
+  this.style.backgroundColor = "lightgray";
+}
     </script>
 </head>
 <body>
@@ -23,25 +80,44 @@
             to react on the events. Event handlers make it so things happen when: a page loads,    
             a button is clicked, the user inputs data, an object is moused over, you touch 
             something on your mobile device, and many other things. 
-            </p>
-            <p>Methods are also used in order to allow the JavaScript to work with the events.  Event
-            attributes can call JavaScript functions, execute JavaScript code directly and impact  
-            how the events are handled or sent, to name a few. 
-            </p>
-            <p>An Event would be something like the following:
+            <br></br>
+            An Event would be something like the following:
             <br></br>
             &bull; onchange - when an element has changed
             &bull; onclick - when a user clicks an element
             &bull; onload - when the browser has fully loaded
             &bull; onmouseover - when the mouse is moved over an element
+            Methods are also used in order to allow the JavaScript to work with the events. By 
+            using the addEventListener, event attributes can call JavaScript functions, 
+            execute JavaScript code directly and impact how the events are handled or sent, 
+            to name a few.
+            <br></br>
+            The syntax for using events is as follows:
+            <br></br>
+            &bull; onclick="JavaScript"
+            &bull; onclick="YourFunctionWithJavaScript()"
+            <br></br>
+            You can also use the addEventListener method which I referred to earlier which looks
+            like this:
+<!-- HTML generated using hilite.me --><div style="background: #eeeedd; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #228B22">// the &quot;click&quot; is the event and displayDate is the function</span>
+    <span style="color: #658b00">document</span>.getElementById(<span style="color: #CD5555">&quot;myBtn&quot;</span>).addEventListener(<span style="color: #CD5555">&quot;click&quot;</span>, displayDate);
+</pre></div>
             </p>
         </div>
         <div>
             <h1>Some Examples:</h1>
-            <p>Onclick
+            <p><bold>onclick</bold>
             <br></br>
+            This example is fairly simple and calls a function that will display the 
+            date and time after the button is clicked.</p>
             <button onclick="displayDate()">Tell Me The Date & Time</button>
             <p id="date"></p>
+            <p><bold>animation: start, iteration and end</bold>
+            <br></br>
+            This is a more complex example to show how CSS animation works in regards to JavaScript
+            events. One the box below is clicked, it the animation will start, it will change again 
+            while it's in transition and change one last time at the end of the animation.</p>
+            <div id="animate" onclick="theAnimation()">Click Me!</div>
         </div>
     </main>
 </body>
