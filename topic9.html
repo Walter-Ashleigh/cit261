@@ -8,6 +8,9 @@
     initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="StyleSheet1.css">
     <script>
+        function displayDate() {
+          document.getElementById("date").innerHTML = Date();
+        }
     </script>
 </head>
 <body>
@@ -27,11 +30,14 @@
             </p>
             <p>An Event would be something like the following:
             <br></br>
-            <li>&bull; onchange - when an element has changed</li>
-            <li>&bull; onclick - when a user clicks an element</li>
-            <li>&bull; onload - when the browser has fully loaded</li>
-            <li>&bull; onmouseover - when the mouse is moved over an element</li>
+            &bull; onchange - when an element has changed
+            &bull; onclick - when a user clicks an element
+            &bull; onload - when the browser has fully loaded
+            &bull; onmouseover - when the mouse is moved over an element
             </p>
+            <p>Some Examples:</p>
+            <button onclick="displayDate()">Tell Me The Date & Time</button>
+            <p id="date"></p>
         </div>
     </main>
 </body>
