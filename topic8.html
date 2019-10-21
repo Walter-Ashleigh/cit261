@@ -61,10 +61,14 @@
             transition to and how long you want the effect to occur. If a duration isn't 
             specified, nothing will happen.
             </p>
+            <p>Example:</p>
             <div class="transition"></div>
-            <input type="button" value="Make The Box Spin!" id="button" onclick="document.getElementsByClassName('transition')[0].classList.add('transitionChange');">
+            <input type="button" value="Make the Box Spin!" id="button" onclick="spinIt()">
             <script>
-//window.onload = function() { document.getElementsByClassName('transition')[0].classList.add('transitionChange'); }            </script>
+                function spinIt() { 
+                    document.getElementsByClassName('transition')[0].classList.add('transitionChange'); 
+                    }
+            </script>
         </div>
     </main>
 </body>
