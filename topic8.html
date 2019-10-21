@@ -22,6 +22,12 @@
          -webkit-transform: rotate(360deg); 
           transform: rotate(360deg);
         }
+        .transitionReturn {
+          width: 100px;
+          height: 100px;
+          -webkit-transform: rotate(360deg); 
+          transform: rotate(360deg);
+        }
     </style>
 </head>
 <body>
@@ -63,10 +69,13 @@
             </p>
             <p>Example:</p>
             <div class="transition"></div>
-            <input type="button" value="Make the Box Spin!" id="button" onclick="spinIt()">
+            <input type="button" value="Make the Box Spin!" id="button" onclick="changeBack()">
             <script>
-                function spinIt() { 
+                window.onload = function spinIt() { 
                     document.getElementsByClassName('transition')[0].classList.add('transitionChange'); 
+                    }
+                function changeBack() { 
+                    document.getElementsByClassName('transition')[0].classList.add('transitionReturn'); 
                     }
             </script>
         </div>
