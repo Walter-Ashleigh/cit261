@@ -25,6 +25,8 @@
         .transitionReturn {
           width: 100px;
           height: 100px;
+          -webkit-transition: width 2s, height 2s, -webkit-transform 2s;
+          transition: width 2s, height 2s, transform 2s;
           -webkit-transform: rotate(360deg); 
           transform: rotate(360deg);
         }
@@ -69,7 +71,7 @@
             </p>
             <p>Example:</p>
             <div class="transition"></div>
-            <input type="button" value="Make the Box Spin!" id="button" onclick="changeBack()">
+            <input type="button" value="Return To Original Size" id="button" onclick="changeBack()">
             <script>
                 window.onload = function spinIt() { 
                     document.getElementsByClassName('transition')[0].classList.add('transitionChange'); 
