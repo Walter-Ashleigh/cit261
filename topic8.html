@@ -70,10 +70,10 @@
             <input type="button" value="Return To Original Size" id="button" onclick="changeBack()">
             <script>
                 window.onload = function spinIt() { 
-                    document.getElementsByClassName('transition').classList.add('transitionChange'); 
+                    document.getElementsByClassName('transition')[0].classList.add('transitionChange'); 
                     }
                 function changeBack() { 
-                    document.getElementsByClassName('transition').classList.add('transitionReturn'); 
+                    document.getElementsByClassName('transition')[0].classList.add('transitionReturn'); 
                     }
             </script>
         </div>
