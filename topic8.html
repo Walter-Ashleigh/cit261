@@ -26,17 +26,22 @@
           height: 100px;
         }
 
-        .myContainer {
-  width: 400px;
-  height: 400px;
-  position: relative;
-  background: yellow;
+        .myBox {
+            width: 100px;
+  height: 100px;
+  background: red;
+  position :relative;
+  -webkit-animation: mymove 5s infinite; /* Safari 4.0 - 8.0 */
+  animation: mymove 5s infinite;
 }
-.myAnimation {
-  width: 50px;
-  height: 50px;
-  position: absolute;
-  background-color: red;
+
+.myOtherBox {
+  width: 100px;
+  height: 100px;
+  background: green;
+  position :relative;
+  -webkit-animation: mymove 1s infinite; /* Safari 4.0 - 8.0 */
+  animation: mymove 1s infinite;
 }
     </style>
 </head>
@@ -105,11 +110,11 @@
             <h1>Animations</h1>
             <p></p>
             <p>
-<div class="myContainer"></div>
+<div class="myBox"></div>
 <input type="button" value="Animate" id="button2" onclick="animateMyContainer()">
 <script>
                 function animateMyContainer() { 
-                    document.getElementsByClassName('myContainer')[0].classList.add('myAnimation'); 
+                    document.getElementsByClassName('myBox')[0].classList.add('myOtherBox'); 
                     }
             </script>
         </div>
