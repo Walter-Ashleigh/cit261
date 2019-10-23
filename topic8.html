@@ -137,6 +137,36 @@
             <p>Here I have an example of how to animate a box by using JavaScript to trigger
             the different CSS properties.
             </p>
+            <!-- HTML generated using hilite.me --><div style="background: #eeeedd; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #008b45; font-weight: bold">.myBox</span> {
+  <span style="color: #8B008B; font-weight: bold">width</span>: <span style="color: #B452CD">200px</span>;
+  <span style="color: #8B008B; font-weight: bold">height</span>: <span style="color: #B452CD">50px</span>;
+  <span style="color: #8B008B; font-weight: bold">background</span>: <span style="color: #658b00">darkred</span>;
+  <span style="color: #8B008B; font-weight: bold">position</span> :<span style="color: #8B008B; font-weight: bold">relative</span>;
+  <span style="color: #8B008B; font-weight: bold">left</span>: <span style="color: #B452CD">50px</span>;
+  -webkit-animation: moveDown <span style="color: #B452CD">10s</span> infinite; 
+  animation: moveDown <span style="color: #B452CD">10s</span> infinite;
+}
+
+<span style="color: #008b45; font-weight: bold">.myOtherBox</span> {
+  <span style="color: #8B008B; font-weight: bold">width</span>: <span style="color: #B452CD">50px</span>;
+  <span style="color: #8B008B; font-weight: bold">height</span>: <span style="color: #B452CD">200px</span>;
+  <span style="color: #8B008B; font-weight: bold">background</span>: <span style="color: #658b00">darkgreen</span>;
+  <span style="color: #8B008B; font-weight: bold">position</span> : <span style="color: #8B008B; font-weight: bold">relative</span>;
+  <span style="color: #8B008B; font-weight: bold">left</span>: <span style="color: #B452CD">50px</span>
+  -webkit-animation: moveUp <span style="color: #B452CD">5s</span> infinite;
+  animation: moveUp <span style="color: #B452CD">5s</span> infinite;
+}
+
+<span style="color: #8B008B; font-weight: bold">@keyframes</span> <span style="color: #8B008B; font-weight: bold">moveDown</span> {
+  <span style="color: #8B008B; font-weight: bold">from</span> {<span style="color: #8B008B; font-weight: bold">top</span>: <span style="color: #B452CD">0px</span>;}
+  <span style="color: #8B008B; font-weight: bold">to</span> {<span style="color: #8B008B; font-weight: bold">top</span>: <span style="color: #B452CD">200px</span>;}
+}
+
+<span style="color: #8B008B; font-weight: bold">@keyframes</span> <span style="color: #8B008B; font-weight: bold">moveUp</span> {
+  <span style="color: #8B008B; font-weight: bold">from</span> {<span style="color: #8B008B; font-weight: bold">top</span>: <span style="color: #B452CD">200px</span>;}
+  <span style="color: #8B008B; font-weight: bold">to</span> {<span style="color: #8B008B; font-weight: bold">top</span>: <span style="color: #B452CD">0px</span>;}
+}
+</pre></div>
             <div class="myBox"></div>
             <input type="button" value="Animate" id="button2" onclick="animateMyBox()">
             <script>
