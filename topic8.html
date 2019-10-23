@@ -29,7 +29,7 @@
         .myBox {
             width: 100px;
   height: 100px;
-  background: red;
+  background: darkred;
   position :relative;
   -webkit-animation: mymove 5s infinite; /* Safari 4.0 - 8.0 */
   animation: mymove 5s infinite;
@@ -38,10 +38,10 @@
 .myOtherBox {
   width: 100px;
   height: 100px;
-  background: green;
+  background: darkgreen;
   position :relative;
-  -webkit-animation: mymove 1s infinite; /* Safari 4.0 - 8.0 */
-  animation: mymove 1s infinite;
+  -webkit-animation: mymoveup 1s infinite; /* Safari 4.0 - 8.0 */
+  animation: mymoveup 1s infinite;
 }
 
 /* Safari 4.0 - 8.0 */
@@ -54,6 +54,18 @@
 @keyframes mymove {
   from {top: 0px;}
   to {top: 200px;}
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes mymoveup {
+  from {top: 200px;}
+  to {top: 0px;}
+}
+
+/* Standard syntax */
+@keyframes mymoveup {
+  from {top: 200px;}
+  to {top: 0px;}
 }
     </style>
 </head>
