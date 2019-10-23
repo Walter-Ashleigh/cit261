@@ -32,8 +32,8 @@
           background: darkred;
           position :relative;
           left: 50px;
-          -webkit-animation: moveDown 10s infinite; /* Safari 4.0 - 8.0 */
-          animation: moveDown 10s infinite;
+          -webkit-animation: moveRight 10s infinite; /* Safari 4.0 - 8.0 */
+          animation: moveRight 10s infinite;
         }
 
         .myOtherBox {
@@ -46,6 +46,11 @@
           animation: moveUp 5s infinite;
         }
 
+        @-webkit-keyframes moveRight {
+    0% { left: 0;}
+    50%{ left : 100%;}
+    100%{ left: 0;}
+}
 /* Safari 4.0 - 8.0 */
 @-webkit-keyframes moveDown {
   from {top: 0px;}
