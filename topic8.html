@@ -137,6 +137,7 @@
             <p>Here I have an example of how to animate a box by using JavaScript to trigger
             the different CSS properties.
             </p>
+            <p>CSS:</p>
             <!-- HTML generated using hilite.me --><div style="background: #eeeedd; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #008b45; font-weight: bold">.myBox</span> {
   <span style="color: #8B008B; font-weight: bold">width</span>: <span style="color: #B452CD">200px</span>;
   <span style="color: #8B008B; font-weight: bold">height</span>: <span style="color: #B452CD">50px</span>;
@@ -167,6 +168,11 @@
   <span style="color: #8B008B; font-weight: bold">to</span> {<span style="color: #8B008B; font-weight: bold">top</span>: <span style="color: #B452CD">0px</span>;}
 }
 </pre></div>
+            <p>JavaScript:</p>
+            <!-- HTML generated using hilite.me --><div style="background: #eeeedd; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #8B008B; font-weight: bold">function</span> animateMyBox() {             
+     <span style="color: #658b00">document</span>.getElementsByClassName(<span style="color: #CD5555">&#39;myBox&#39;</span>)[<span style="color: #B452CD">0</span>].classList.add(<span style="color: #CD5555">&#39;myOtherBox&#39;</span>); 
+    }
+    </pre></div>    
             <div class="myBox"></div>
             <input type="button" value="Animate" id="button2" onclick="animateMyBox()">
             <script>
