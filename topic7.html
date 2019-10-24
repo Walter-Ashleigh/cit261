@@ -13,7 +13,10 @@
         <header>CSS3 Using JavaScript</header>
         <div>
             <h1>Using JavaScript to Change Styles</h1>
-            <p>You can change different styles of an element using JavaScript.</p>
+            <p>You can change different styles of an element using JavaScript.  You can 
+            set the style of an element when you append a CSS property to the style property
+            and then specify a value.
+            </p>
             <h3>Syntax to change a style inline:</h3>
             <!-- HTML generated using hilite.me --><div style="background: #eeeedd; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #658b00">document</span>.getElementById(<span style="color: #CD5555">&quot;demo&quot;</span>).style.color = <span style="color: #CD5555">&quot;pink&quot;</span>;
 </pre></div>
@@ -22,6 +25,20 @@
 <span style="color: #658b00">onclick=</span><span style="color: #CD5555">&quot;document.getElementById(&#39;demo&#39;).style.color = &#39;white&#39;&quot;</span><span style="color: #8B008B; font-weight: bold">&gt;</span>
 Click Me!<span style="color: #8B008B; font-weight: bold">&lt;/button&gt;</span>;
 </pre></div>
+            <p>You can also use the setAttribute() method to change styles but it's not 
+            recommended because this way can overwrite the CSS properties you have specified 
+            in your style attribute.
+            </p>
+            <p id="para" style="border-top: 5px solid red;">This example shows how
+            the click of a button can change an element's property.  Here, if you click the button,
+            the border color will change.</p>
+            <button onclick="changeBorder()">Change the Color</button>
+
+            <script>
+            function myFunctionchangeBorder() {
+            var x = document.getElementById("myP").style.borderTopColor = "blue";
+            }
+            </script>
         </div>
     </main>
 </body>
