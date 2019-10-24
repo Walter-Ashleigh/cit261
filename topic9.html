@@ -114,6 +114,20 @@
             <div class="spinMe">
               <div class="animateMe"></div>
             </div>
+            <h3>Ontouchstart</h3>
+            <p>This example will only work on a device with touch screen capabilities.  Along with all
+            the many other events, there are some specifically designed for touchscreen devices.  Here
+            I show you how the ontouchstart event can display an element with the touch of the screen.
+            </p>
+            <p ontouchstart="touchMe()">Touching this paragraph will call a function to display
+            my favorite holiday.</p>
+            <p id="touchDemo"></p>
+
+            <script>
+              function touchMe() {
+                document.getElementById("touchDemo").innerHTML = "I love CHRISTMAS!";
+              }
+            </script>
         </div>
     </main>
 </body>
