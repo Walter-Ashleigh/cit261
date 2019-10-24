@@ -8,6 +8,51 @@
     initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="StyleSheet1.css">
     <style> 
+      .animateMe {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        -webkit-animation-name: colorChange; 
+        -webkit-animation-duration: 4s; 
+        -webkit-animation-iteration-count: infinite;
+        animation-name: colorChange;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+      }
+
+      .spinMe {
+        width: 100px;
+        height: 100px;
+        position: relative;
+        -webkit-animation-name: spin; 
+        -webkit-animation-duration: 4s; 
+        -webkit-animation-iteration-count: infinite;
+        animation-name: spin;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+      }
+
+      @-webkit-keyframes spin { 
+          100% { 
+              transform: rotate(360deg);
+          } 
+      }
+
+      @keyframes spin { 
+          100% { 
+              transform: rotate(360deg);
+          } 
+      }
+
+      @-webkit-keyframes colorChange {
+        from {background-color: red;}
+        to {background-color: blue;}
+      }
+
+      @keyframes colorChange {
+        from {background-color: red;}
+        to {background-color: blue;}
+      }
     </style>
     <script>
         // first example
@@ -41,6 +86,7 @@
             The syntax for using events is as follows:
             <br></br>
             &bull; onclick="JavaScript"
+            <br></br>
             &bull; onclick="YourFunctionWithJavaScript()"
             <br></br>
             You can also use the addEventListener method which I referred to earlier which looks
@@ -52,18 +98,22 @@
         </div>
         <div>
             <h1>Some Examples:</h1>
-            <p><bold>onclick</bold>
-            <br></br>
+            <h3>Onclick</h3>
+            <p>
             This example is fairly simple and calls a function that will display the 
             date and time after the button is clicked.</p>
             <button onclick="displayDate()">Tell Me The Date & Time</button>
             <p id="date"></p>
-            <p><bold>animation: start, iteration and end</bold>
+            <h3>Animation, using keyframes</h3>
             <br></br>
-            This is a more complex example to show how CSS animation works in regards to JavaScript
-            events. One the box below is clicked, it the animation will start, it will change again 
-            while it's in transition and change one last time at the end of the animation.</p>
------using animations without javascript----https://www.w3schools.com/css/css3_animations.asp
+            This is a more complex example to show how CSS animation works.  You can use keyframes
+            to specify styles that will take place at specified times.  You must also bind the an 
+            animation to an element in order for it to work.  For example, you can assign it to a DIV
+            element with a specific ID or class.  Here I used the keyframes to change a DIV element to 
+            show multiple background colors as well as spin my square at the same time.</p>
+            <div class="spinMe">
+              <div class="animateMe"></div>
+            </div>
         </div>
     </main>
 </body>
