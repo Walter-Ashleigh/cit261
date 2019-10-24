@@ -29,7 +29,7 @@ Click Me!<span style="color: #8B008B; font-weight: bold">&lt;/button&gt;</span>;
             recommended because this way can overwrite the CSS properties you have specified 
             in your style attribute.
             </p>
-            <p id="para" style="border-top: 5px solid red;">This example shows how
+            <p id="para" style="border-top: 5px solid darkred;">This example shows how
             the click of a button can change an element's property.</p>
             <button onclick="changeBorderColor()">Change the Color of the Border</button>
             <br></br>
@@ -38,9 +38,11 @@ Click Me!<span style="color: #8B008B; font-weight: bold">&lt;/button&gt;</span>;
             <button onclick="changeBackgroundColor()">Change the Background Color</button>
             <br></br>
             <button onclick="changeTextColor()">Change the Text Color</button>
+            <br></br>
+            <button onclick="addBottomBorder()">Add a Bottom Border</button>
             <script>
             function changeBorderColor() {
-            var x = document.getElementById("para").style.borderTopColor = "blue";
+            var x = document.getElementById("para").style.borderTopColor = "darkgreen";
             }
             function changeBorderWidth() {
             var x = document.getElementById("para").style.borderTopWidth = "20px";
@@ -50,6 +52,9 @@ Click Me!<span style="color: #8B008B; font-weight: bold">&lt;/button&gt;</span>;
             }
             function changeTextColor() {
             var x = document.getElementById("para").style.color = "white";
+            }
+            function addBottomBorder() {
+            var x = document.getElementById("para").style.borderBottom = "20px solid darkgreen";
             }
             </script>
         </div>
