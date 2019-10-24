@@ -40,6 +40,8 @@ Click Me!<span style="color: #8B008B; font-weight: bold">&lt;/button&gt;</span>;
             <button onclick="changeTextColor()">Change the Text Color</button>
             <br></br>
             <button onclick="addBottomBorder()">Add a Bottom Border</button>
+            <br></br>
+            <button onclick="biggerText()">Make the Text Larger</button>
             <script>
             function changeBorderColor() {
             var x = document.getElementById("para").style.borderTopColor = "darkgreen";
@@ -55,6 +57,9 @@ Click Me!<span style="color: #8B008B; font-weight: bold">&lt;/button&gt;</span>;
             }
             function addBottomBorder() {
             var x = document.getElementById("para").style.borderBottom = "20px solid darkgreen";
+            }
+            function biggerText() {
+            var x = document.getElementById("para").style.fontSize = "40px";
             }
             </script>
         </div>
