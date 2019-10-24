@@ -30,13 +30,15 @@ Click Me!<span style="color: #8B008B; font-weight: bold">&lt;/button&gt;</span>;
             in your style attribute.
             </p>
             <p id="para" style="border-top: 5px solid red;">This example shows how
-            the click of a button can change an element's property.  Here, if you click the button,
-            the border color will change.</p>
-            <button onclick="changeBorder()">Change the Color</button>
-
+            the click of a button can change an element's property.</p>
+            <button onclick="changeBorderColor()">Change the Color of the Border</button>
+            <button onclick="changeBorderWidth()">Change the Width of the Border</button>
             <script>
-            function myFunctionchangeBorder() {
+            function changeBorderColor() {
             var x = document.getElementById("para").style.borderTopColor = "blue";
+            }
+            function changeBorderWidth() {
+            var x = document.getElementById("para").style.borderTopWidth = "20px";
             }
             </script>
         </div>
