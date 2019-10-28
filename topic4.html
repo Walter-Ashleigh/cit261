@@ -84,6 +84,34 @@ xhttp.send();
             &bull; Sending user input (it's more secure than GET) 
             </p>
         </div>
+        <div>
+            <h1>JSON HTTP Request</h1>
+            <p>One thing you can do is read JSON data using the XMLHttpRequest.</p>
+            <input type="button" value="Read some JSON data" id="btn" onclick="myFunction()">
+            <script>
+                    var xmlhttp = new XMLHttpRequest();
+                    var url = "myTutorials.txt";
+                    
+                    xmlhttp.onreadystatechange = function() {
+                      if (this.readyState == 4 && this.status == 200) {
+                        var myArr = JSON.parse(this.responseText);
+                        myFunction(myArr);
+                      }
+                    };
+                    xmlhttp.open("GET", url, true);
+                    xmlhttp.send();
+                    
+                    function myFunction(arr) {
+                      var out = "";
+                      var i;
+                      for(i = 0; i < arr.length; i++) {
+                        out += '<a href="' + arr[i].url + '">' + 
+                        arr[i].display + '</a><br>';
+                      }
+                      document.getElementById("id01").innerHTML = out;
+                    }
+                    </script>
+        </div>
     </main>
 </body>
 </html>
