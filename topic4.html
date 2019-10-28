@@ -87,8 +87,24 @@ xhttp.send();
         <div>
             <h1>JSON HTTP Request</h1>
             <p>One thing you can do is read JSON data using the XMLHttpRequest.</p>
-            <input type="button" value="Read some JSON data" id="btn" onclick="myFunction()">
+            <button type="button" id="btn" onclick="myFunction()">Read some JSON data</button>
+            <div id="id01"></div>
             <script>
+                    var myArray = [
+                    {
+                    "display": "JavaScript Tutorial",
+                    "url": "https://www.w3schools.com/js/default.asp"
+                    },
+                    {
+                    "display": "HTML Tutorial",
+                    "url": "https://www.w3schools.com/html/default.asp"
+                    },
+                    {
+                    "display": "CSS Tutorial",
+                    "url": "https://www.w3schools.com/css/default.asp"
+                    }
+                    ]
+
                     var xmlhttp = new XMLHttpRequest();
                     var url = "myTutorials.txt";
                     
