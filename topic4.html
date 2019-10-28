@@ -47,6 +47,43 @@
             7. JavaScript performs the necessary action (ex. page is updated)
             </p>
         </div>
+        <div>
+            <h1>XMLHttpRequest object</h1>
+            <p>Example JavaScript Syntax:
+            <!-- HTML generated using hilite.me --><div style="background: #eeeedd; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #228B22">// Create the object</span>
+<span style="color: #8B008B; font-weight: bold">var</span> xhttp = <span style="color: #8B008B; font-weight: bold">new</span> XMLHttpRequest();
+<span style="color: #228B22">// Specifies a function to be executed when the object changes</span>
+xhttp.onreadystatechange = <span style="color: #8B008B; font-weight: bold">function</span>() {
+    <span style="color: #228B22">// If statement to check that the response is ready</span>
+    <span style="color: #8B008B; font-weight: bold">if</span> (<span style="color: #8B008B; font-weight: bold">this</span>.readyState == <span style="color: #B452CD">4</span> &amp;&amp; <span style="color: #8B008B; font-weight: bold">this</span>.status == <span style="color: #B452CD">200</span>) {
+       <span style="color: #228B22">// Return the response as a string, which can be used to update the webpage</span>
+       <span style="color: #658b00">document</span>.getElementById(<span style="color: #CD5555">&quot;demo&quot;</span>).innerHTML = xhttp.responseText;
+    }
+};
+xhttp.open(<span style="color: #CD5555">&quot;GET&quot;</span>, <span style="color: #CD5555">&quot;filename&quot;</span>, <span style="color: #8B008B; font-weight: bold">true</span>);
+xhttp.send();
+</pre></div>
+            <!-- HTML generated using hilite.me --><div style="background: #eeeedd; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #228B22">// Specifies the type of request</span>
+<span style="color: #228B22">// open(method, url, async)</span>
+xhttp.open(<span style="color: #CD5555">&quot;GET&quot;</span>, <span style="color: #CD5555">&quot;filename&quot;</span>, <span style="color: #8B008B; font-weight: bold">true</span>);
+<span style="color: #228B22">// Sends the request to the server for GET</span>
+xhttp.send();
+<span style="color: #228B22">// You can use send(string) to send the request for POST</span>
+</pre></div>
+            GET vs POST:
+            <br></br>
+            GET requests data from a specified source. POST submits data to be processed by a
+            specified source. Both can be used to retrieve data from the server, but GET is simpler 
+            and faster.  GET may return cached data, whereas POST will not. POST requests should
+            be used when:
+            <br></br>
+            &bull; You're sending large amounts of data to a server (since it has no size limitation)
+            <br></br>
+            &bull; A cached file isn't an option (updating a file or database on the server)
+            <br></br>
+            &bull; Sending user input (it's more secure than GET) 
+            </p>
+        </div>
     </main>
 </body>
 </html>
