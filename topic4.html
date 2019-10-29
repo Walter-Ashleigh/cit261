@@ -88,7 +88,7 @@ xhttp.send();
             <h1>HTTP Request Examples</h1>
             <div id="demoTXT">
             <h3>Text File</h3>
-            <button type="button" onclick="loadDoc()">Change Content</button>
+            <button type="button" onclick="loadDoc()">Request data from TXT file</button>
             </div>
                     
             <script>
@@ -106,25 +106,26 @@ xhttp.send();
             </script>
 
 <h3>Use the XMLHttpRequest to get the content of a file.</h3>
-<p>The content is written in JSON format, and can easily be converted into a JavaScript object.</p>
-
 <p id="demo"></p>
-<button type="button" onclick="loadDoc()">Change Content</button>
+<button type="button" onclick="loadDoc2()">Request data from JSON file</button>
 <script>
-function loadDoc() {
+function loadDoc2() {
 var xmlhttp = new XMLHttpRequest();
 xmlhttp.onreadystatechange = function() {
   if (this.readyState == 4 && this.status == 200) {
     var myObj = JSON.parse(this.responseText);
-    document.getElementById("demo").innerHTML = myObj.name + " " + myObj.age;
+ 
+    var txt ="";
+   for (txt in myObj)
+  /* document.getElementById("demo").innerHTML = myObj.name + " " + myObj.age;*/
+  document.getElementById("demo").innerHTML += myObj[txt] + "<br>";
+
   }
 };
 xmlhttp.open("GET", "json_demo.txt", true);
 xmlhttp.send();
 }
 </script>
-
-<p>Take a look at <a href="json_demo.txt" target="_blank">json_demo.txt</a></p>
             
         </div>
     </main>
