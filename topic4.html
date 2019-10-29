@@ -86,25 +86,48 @@ xhttp.send();
         </div>
         <div>
             <h1>HTTP Request Examples</h1>
-            <div id="demo">
-                    <h3>Text file</h3>
-                    <button type="button" onclick="loadDoc()">Change Content</button>
-                    </div>
+            <div id="demoTXT">
+            <h3>Simple Text File</h3>
+            <button type="button" onclick="loadDoc()">Change Content</button>
+            </div>
                     
-                    <script>
-                    function loadDoc() {
-                      var xhttp = new XMLHttpRequest();
-                      xhttp.onreadystatechange = function() {
-                        if (this.readyState == 4 && this.status == 200) {
-                          document.getElementById("demo").innerHTML =
-                          this.responseText;
-                        }
-                      };
-                      xhttp.open("GET", "myTextFile.txt", true);
-                      xhttp.send();
-                    }
-                    </script>
+            <script>
+            function loadDoc() {
+              var xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById("demoTXT").innerHTML =
+                    this.responseText;
+                }
+                };
+                xhttp.open("GET", "myTextFile.txt", true);
+                xhttp.send();
+                }
+            </script>
 
+            <div id="demoCB">
+            <button type="button"
+            onclick="loadDoc('myTextFile.txt', myFunction)">Change Content w/ Callback Function
+            </button>
+            </div>
+
+            <script>
+            function loadDoc(url, cFunction) {
+            var xhttp;
+            xhttp=new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                cFunction(this);
+                }
+            };
+            xhttp.open("GET", url, true);
+            xhttp.send();
+            }
+            function myFunction(xhttp) {
+            document.getElementById("demoCB").innerHTML =
+            xhttp.responseText;
+            }
+            </script>
         </div>
     </main>
 </body>
