@@ -1,0 +1,5 @@
+Hi, my name is Ashleigh and this is the data from my text file.
+Some of my favorite things are:
+1. Football
+2. Art
+3. Holidays
