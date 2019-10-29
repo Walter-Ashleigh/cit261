@@ -85,48 +85,26 @@ xhttp.send();
             </p>
         </div>
         <div>
-            <h1>JSON HTTP Request</h1>
-            <p>One thing you can do is read JSON data using the XMLHttpRequest.</p>
-            <button type="button" id="btn" onclick="testingThis()">Read some JSON data</button>
-            <div id="id01"></div>
-            <script>
-                    var myArray = [
-                    {
-                    "display": "JavaScript Tutorial",
-                    "url": "https://www.w3schools.com/js/default.asp"
-                    },
-                    {
-                    "display": "HTML Tutorial",
-                    "url": "https://www.w3schools.com/html/default.asp"
-                    },
-                    {
-                    "display": "CSS Tutorial",
-                    "url": "https://www.w3schools.com/css/default.asp"
-                    }
-                    ]
-                    function testingThis() {}
-                    var xmlhttp = new XMLHttpRequest();
-                    var url = "myTutorials.txt";
+            <h1>HTTP Request Examples</h1>
+            <div id="demo">
+                    <h2>The XMLHttpRequest Object</h2>
+                    <button type="button" onclick="loadDoc()">Change Content</button>
+                    </div>
                     
-                    xmlhttp.onreadystatechange = function() {
-                      if (this.readyState == 4 && this.status == 200) {
-                        var myArr = JSON.parse(this.responseText);
-                        myFunction(myArr);
-                      }
-                    };
-                    xmlhttp.open("GET", url, true);
-                    xmlhttp.send();
-                }
-                    function myFunction(arr) {
-                      var out = "";
-                      var i;
-                      for(i = 0; i < arr.length; i++) {
-                        out += '<a href="' + arr[i].url + '">' + 
-                        arr[i].display + '</a><br>';
-                      }
-                      document.getElementById("id01").innerHTML = out;
+                    <script>
+                    function loadDoc() {
+                      var xhttp = new XMLHttpRequest();
+                      xhttp.onreadystatechange = function() {
+                        if (this.readyState == 4 && this.status == 200) {
+                          document.getElementById("demo").innerHTML =
+                          this.responseText;
+                        }
+                      };
+                      xhttp.open("GET", "ajax_info.txt", true);
+                      xhttp.send();
                     }
                     </script>
+
         </div>
     </main>
 </body>
