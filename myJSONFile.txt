@@ -1,9 +1,10 @@
 {
-    "name":"John",
-    "age":31,
-    "houseNum":500,
-    "street": "Danbury Lane",
-    "city": "Springfield",
-    "state": "MO",
-    "zip":99999
+    "name1":"Abby",
+    "name2":"Bobby",
+    "name3": "Crystal",
+    "name4": "Daniel",
+    "name5": "Evelyn",
+    "name6": "Frank",
+    "name7": "Greg",
+    "name8": "Helen"
 }

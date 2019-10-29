@@ -105,27 +105,24 @@ xhttp.send();
                 }
             </script>
 
-<h3>Use the XMLHttpRequest to get the content of a json file.</h3>
-<p id="demo"></p>
-<button type="button" onclick="loadDoc2()">Request data from JSON file</button>
-<script>
-function loadDoc2() {
-var xmlhttp = new XMLHttpRequest();
-xmlhttp.onreadystatechange = function() {
-  if (this.readyState == 4 && this.status == 200) {
-    var myObj = JSON.parse(this.responseText);
- 
-    var txt ="";
-   for (txt in myObj)
-  /* document.getElementById("demo").innerHTML = myObj.name + " " + myObj.age;*/
-  document.getElementById("demo").innerHTML += myObj[txt] + "<br>";
-
-  }
-};
-xmlhttp.open("GET", "myJSONFile.txt", true);
-xmlhttp.send();
-}
-</script>
+            <h3>Use the XMLHttpRequest to display a list of JSON objects</h3>
+            <p id="demoJSON"></p>
+            <button type="button" onclick="loadDoc2()">Request data from JSON file</button>
+            <script>
+            function loadDoc2() {
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                var myObj = JSON.parse(this.responseText);
+                var txt ="";
+            for (txt in myObj)
+            document.getElementById("demoJSON").innerHTML += "&bull;" + myObj[txt] + "<br>";
+            }
+            };
+            xmlhttp.open("GET", "myJSONFile.txt", true);
+            xmlhttp.send();
+            }
+            </script>
             
         </div>
     </main>
