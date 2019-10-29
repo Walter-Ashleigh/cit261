@@ -1,9 +1,9 @@
 {
     "name":"John",
     "age":31,
-    "pets":[
-        { "animal":"dog", "name":"Fido" },
-        { "animal":"cat", "name":"Felix" },
-        { "animal":"hamster", "name":"Lightning" }
-    ]
+    "houseNum":500,
+    "street": "Danbury Lane",
+    "city": "Springfield",
+    "state": "MO",
+    "zip":99999,
 }
