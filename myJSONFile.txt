@@ -1,0 +1,9 @@
+{
+    "name":"John",
+    "age":31,
+    "houseNum":500,
+    "street": "Danbury Lane",
+    "city": "Springfield",
+    "state": "MO",
+    "zip":99999
+}
