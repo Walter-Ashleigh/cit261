@@ -87,7 +87,7 @@ xhttp.send();
         <div>
             <h1>HTTP Request Examples</h1>
             <div id="demoTXT">
-            <h3>Change the text you have here.</h3>
+            <h3>Change the text you have here, by requesting a simple text file.</h3>
             <button type="button" onclick="loadDoc()">Request data from TXT file</button>
             </div>
                     
@@ -105,23 +105,23 @@ xhttp.send();
                 }
             </script>
 
-            <h3>Use the XMLHttpRequest to display a list of JSON objects</h3>
+            <h3>Request a list of JSON objects</h3>
             <p id="demoJSON"></p>
             <button type="button" onclick="loadDoc2()">Request data from JSON file</button>
             <script>
             function loadDoc2() {
-            var xmlhttp = new XMLHttpRequest();
-            xmlhttp.onreadystatechange = function() {
-            if (this.readyState == 4 && this.status == 200) {
-                var myObj = JSON.parse(this.responseText);
-                var txt ="";
-            for (txt in myObj)
-            document.getElementById("demoJSON").innerHTML += "&bull;" + myObj[txt] + "<br>";
-            }
-            };
-            xmlhttp.open("GET", "myJSONFile.txt", true);
-            xmlhttp.send();
-            }
+                var xmlhttp = new XMLHttpRequest();
+                    xmlhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        var myObj = JSON.parse(this.responseText);
+                        var txt ="";
+                    for (txt in myObj)
+                    document.getElementById("demoJSON").innerHTML += "&bull;" + " " + myObj[txt] + "<br>";
+                    }
+                    };
+                    xmlhttp.open("GET", "myJSONFile.txt", true);
+                    xmlhttp.send();
+                    }
             </script>
             
         </div>
