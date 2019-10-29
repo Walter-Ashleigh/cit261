@@ -87,7 +87,7 @@ xhttp.send();
         <div>
             <h1>HTTP Request Examples</h1>
             <div id="demoTXT">
-            <h3>Text File</h3>
+            <h3>Change the text you have here.</h3>
             <button type="button" onclick="loadDoc()">Request data from TXT file</button>
             </div>
                     
@@ -105,7 +105,7 @@ xhttp.send();
                 }
             </script>
 
-<h3>Use the XMLHttpRequest to get the content of a file.</h3>
+<h3>Use the XMLHttpRequest to get the content of a json file.</h3>
 <p id="demo"></p>
 <button type="button" onclick="loadDoc2()">Request data from JSON file</button>
 <script>
@@ -122,7 +122,7 @@ xmlhttp.onreadystatechange = function() {
 
   }
 };
-xmlhttp.open("GET", "myJSONFile.JSON", true);
+xmlhttp.open("GET", "myJSONFile.json", true);
 xmlhttp.send();
 }
 </script>
