@@ -13,7 +13,33 @@
         <header>JavaScript</header>
         <div>
             <h1>Loops</h1>
-            <p></p>
+            <p>Loops will execute a block of code numerous times.
+            <br></br>
+            for: loops through a block of code a number of times
+            <br></br>
+            for/in: loops through properties of an object
+            <br></br>
+            for/of: loops through values of an iterable object
+            <br></br>
+            while: loops through a block of code while a specified condition is true
+            <br></br>
+            do/while: same as the while loop, just different syntax</p>
+            <p>Example of a for loop:</p>
+
+            <p id="monthp"></p>
+
+            <script>
+            var months = ["January", "February", "March", "April", "May", "June", "July",
+                        "August", "September", "October", "November", "December"];
+            var i; 
+            var len = months.length;
+            var txt = "";
+            for (i = 0; i < len; i++) {
+            txt += months[i] + "<br>";
+            }
+            document.getElementById("monthp").innerHTML = txt;
+            </script>
+
         </div>
         <div>
             <h1>Conditional Statements</h1>
