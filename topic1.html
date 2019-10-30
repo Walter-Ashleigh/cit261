@@ -15,15 +15,15 @@
             <h1>Loops</h1>
             <p>Loops will execute a block of code numerous times.
             <br></br>
-            for: loops through a block of code a number of times
+            &bull; for: loops through a block of code a number of times
             <br></br>
-            for/in: loops through properties of an object
+            &bull; for/in: loops through properties of an object
             <br></br>
-            for/of: loops through values of an iterable object
+            &bull; for/of: loops through values of an iterable object
             <br></br>
-            while: loops through a block of code while a specified condition is true
+            &bull; while: loops through a block of code while a specified condition is true
             <br></br>
-            do/while: same as the while loop, just different syntax</p>
+            &bull; do/while: same as the while loop, just different syntax</p>
             <h3>Example of a for loop:</h3>
             <!-- HTML generated using hilite.me --><div style="background: #eeeedd; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">            <span style="color: #8B008B; font-weight: bold">var</span> months = [<span style="color: #CD5555">&quot;January&quot;</span>, <span style="color: #CD5555">&quot;February&quot;</span>, <span style="color: #CD5555">&quot;March&quot;</span>, <span style="color: #CD5555">&quot;April&quot;</span>, <span style="color: #CD5555">&quot;May&quot;</span>, <span style="color: #CD5555">&quot;June&quot;</span>, <span style="color: #CD5555">&quot;July&quot;</span>,
                 <span style="color: #CD5555">&quot;August&quot;</span>, <span style="color: #CD5555">&quot;September&quot;</span>, <span style="color: #CD5555">&quot;October&quot;</span>, <span style="color: #CD5555">&quot;November&quot;</span>, <span style="color: #CD5555">&quot;December&quot;</span>];
@@ -53,7 +53,47 @@
         </div>
         <div>
             <h1>Conditional Statements</h1>
-            <p></p>
+            <p>Conditional statements allow you to perform a certain action based on a
+            specified condition.
+            <br></br>
+            &bull; if: the code would be executed if the condition is true
+            <br></br>
+            &bull; else: the same code from above would be executed if the condition is false
+            <br></br>
+            &bull; else/if: specifies a new condition to test if the first condition is false
+            <br></br>
+            &bull; switch: specifies multiple different blocks of code to be executed
+            </p>
+            <h3>Example of an if/else statement:</h3>
+            <!-- HTML generated using hilite.me --><div style="background: #eeeedd; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">            <span style="color: #8B008B; font-weight: bold">function</span> getGreeting() {
+                <span style="color: #8B008B; font-weight: bold">var</span> hour = <span style="color: #8B008B; font-weight: bold">new</span> <span style="color: #658b00">Date</span>().getHours(); 
+                <span style="color: #8B008B; font-weight: bold">var</span> greeting;
+                <span style="color: #8B008B; font-weight: bold">if</span> (hour &lt; <span style="color: #B452CD">18</span>) {
+                    greeting = <span style="color: #CD5555">&quot;Hope you&#39;re enjoying your day!&quot;</span>;
+                } <span style="color: #8B008B; font-weight: bold">else</span> {
+                    greeting = <span style="color: #CD5555">&quot;Hope you&#39;re enjoying your evening!&quot;</span>;
+                }
+                <span style="color: #658b00">document</span>.getElementById(<span style="color: #CD5555">&quot;greet&quot;</span>).innerHTML = greeting;
+                }
+    </pre></div>
+    
+            <p>The button below displays a greeting based on the time:</p>
+            <button onclick="getGreeting()">Click Me</button>
+
+            <p id="greet"></p>
+
+            <script>
+            function getGreeting() {
+            var hour = new Date().getHours(); 
+            var greeting;
+            if (hour < 18) {
+                greeting = "Hope you're enjoying your day!";
+            } else {
+                greeting = "Hope you're enjoying your evening!";
+            }
+            document.getElementById("greet").innerHTML = greeting;
+            }
+            </script>
         </div>
         <div>
             <h1>Functions</h1>
