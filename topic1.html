@@ -97,11 +97,14 @@
         </div>
         <div>
             <h1>Functions</h1>
-            <p></p>
+            <p>A function is a block of code that performs a specific task and is 
+            executed when it's called.  This can be done when the window is opened
+            as well as other ways such as a click of a button.
+            </p>
         </div>
         <div>
              <h1>Variables</h1>
-            <p></p>
+            <p>Variables are containers that store data values.</p>
         </div>
         <div>
             <h1>Parameters</h1>
@@ -109,11 +112,24 @@
         </div>
         <div>
             <h1>Arrays</h1>
-            <p></p>
+            <p>Arrays are used to store multiple values within a variable.</p>
         </div>
         <div>
             <h1>Associative Arrays</h1>
-            <p></p>
+            <p>Associative arrays are arrays with named indexes.  However, JavaScript
+            doesn't support  arrays with named indexes.  In JS arrays always use 
+            numbered indexes.
+            </p>
+            <p id="aArray"></p>
+
+            <script>
+            var person = [];
+            person[0] = "Rebecca";
+            person[1] = "Jamie";
+            person[2] = "Christopher; 
+            document.getElementById("aArray").innerHTML =
+            person[2] + " " + person.length;
+            </script>
         </div>
     </main>
 </body>
