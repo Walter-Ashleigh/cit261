@@ -120,6 +120,14 @@
             doesn't support  arrays with named indexes.  In JS arrays always use 
             numbered indexes.
             </p>
+            <!-- HTML generated using hilite.me --><div style="background: #eeeedd; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #8B008B; font-weight: bold">var</span> person = [];
+person[<span style="color: #B452CD">0</span>] = <span style="color: #CD5555">&quot;Rebecca&quot;</span>;
+person[<span style="color: #B452CD">1</span>] = <span style="color: #CD5555">&quot;Jamie&quot;</span>;
+person[<span style="color: #B452CD">2</span>] = <span style="color: #CD5555">&quot;Christopher&quot;</span>; 
+<span style="color: #658b00">document</span>.getElementById(<span style="color: #CD5555">&quot;aArray&quot;</span>).innerHTML =
+<span style="color: #CD5555">&quot;The person with the index numbered 2 is &quot;</span> + person[<span style="color: #B452CD">2</span>] + <span style="color: #CD5555">&quot; and the length of the array is &quot;</span> + person.length;
+</pre></div>
+
             <p id="aArray"></p>
 
             <script>
@@ -127,8 +135,8 @@
             person[0] = "Rebecca";
             person[1] = "Jamie";
             person[2] = "Christopher"; 
-            document.getElementById("aArray").innerHTML = "Person with the index 2 is "
-            person[2] + " and the length of the array is " + person.length;
+            document.getElementById("aArray").innerHTML =
+            "The person with the index numbered 2 is " + person[2] + " and the length of the array is " + person.length;
             </script>
         </div>
     </main>
