@@ -24,8 +24,18 @@
             while: loops through a block of code while a specified condition is true
             <br></br>
             do/while: same as the while loop, just different syntax</p>
-            <p>Example of a for loop:</p>
-
+            <h3>Example of a for loop:</h3>
+            <!-- HTML generated using hilite.me --><div style="background: #eeeedd; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">            <span style="color: #8B008B; font-weight: bold">var</span> months = [<span style="color: #CD5555">&quot;January&quot;</span>, <span style="color: #CD5555">&quot;February&quot;</span>, <span style="color: #CD5555">&quot;March&quot;</span>, <span style="color: #CD5555">&quot;April&quot;</span>, <span style="color: #CD5555">&quot;May&quot;</span>, <span style="color: #CD5555">&quot;June&quot;</span>, <span style="color: #CD5555">&quot;July&quot;</span>,
+                <span style="color: #CD5555">&quot;August&quot;</span>, <span style="color: #CD5555">&quot;September&quot;</span>, <span style="color: #CD5555">&quot;October&quot;</span>, <span style="color: #CD5555">&quot;November&quot;</span>, <span style="color: #CD5555">&quot;December&quot;</span>];
+                <span style="color: #8B008B; font-weight: bold">var</span> i; 
+                <span style="color: #8B008B; font-weight: bold">var</span> len = months.length;
+                <span style="color: #8B008B; font-weight: bold">var</span> txt = <span style="color: #CD5555">&quot;&quot;</span>;
+                <span style="color: #8B008B; font-weight: bold">for</span> (i = <span style="color: #B452CD">0</span>; i &lt; len; i++) {
+                txt += months[i] + <span style="color: #CD5555">&quot;&lt;br&gt;&quot;</span>;
+                }
+                <span style="color: #658b00">document</span>.getElementById(<span style="color: #CD5555">&quot;monthp&quot;</span>).innerHTML = txt;
+    </pre></div>
+    
             <p id="monthp"></p>
 
             <script>
