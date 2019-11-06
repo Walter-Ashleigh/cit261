@@ -13,7 +13,8 @@
           width: 200px;
           height: 200px;
           background: white;
-          transition: all;
+          text-align: center;
+          transition-property: all;
           transition-duration: .5s;
           transition-timing-function: linear;		
         }
@@ -22,7 +23,7 @@
           width: 350px;
           height: 150px;
           background: darkred;
-          transition: all;
+          transition-property: all;
           transition-duration: 1s;
           transition-timing-function: ease;		
         }
@@ -31,9 +32,18 @@
           width: 200px;
           height: 200px;
           background: darkgreen;
-          transition: all;
+          transition-property: all;
           transition-duration: 1s;
           transition-timing-function: cubic-bezier(.23,1.07,.24,-0.79);
+        }
+        #box4
+        {
+          width: 250px;
+          height: 50px;
+          background: grey;
+          transition-property: color;
+          transition-duration: 2s;
+          transition-timing-function: ease-out;
         }
         .border:hover
         {
@@ -42,11 +52,16 @@
         .circle:hover
 		{
           border-radius:100%;
+          color: white;
 		}
         .rotate:hover
         {
           -webkit-transform: rotate(30deg);
           transform: rotate(30deg);
+        }
+        .colorChange:hover
+        {
+        color: white;
         }
     </style>
 </head>
@@ -83,23 +98,25 @@
         <div>
             <h1>Examples of Transitions</h1>
             <p>Changing A Square To Circle: Uses the linear speed curve.</p>
-            <div class="circle" id="box1"></div>
-            <!-- HTML generated using hilite.me --><div style="background: #eeeedd; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #8B008B; font-weight: bold">transition</span>: <span style="color: #8B008B; font-weight: bold">all</span>;
+            <div class="circle" id="box1">Hello</div>
+            <!-- HTML generated using hilite.me --><div style="background: #eeeedd; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #8B008B; font-weight: bold">transition-property</span>: <span style="color: #8B008B; font-weight: bold">all</span>;
 <span style="color: #8B008B; font-weight: bold">transition-duration</span>: <span style="color: #008b45; font-weight: bold">.5s</span>;
 <span style="color: #8B008B; font-weight: bold">transition-timing-function</span>: <span style="color: #8B008B; font-weight: bold">linear</span>;	
 </pre></div>
             <p>Adding An Inset Border: Uses the ease speed curve.</p>
             <div class="border" id="box2"></div>
-            <!-- HTML generated using hilite.me --><div style="background: #eeeedd; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #8B008B; font-weight: bold">transition</span>: <span style="color: #8B008B; font-weight: bold">all</span>;
+            <!-- HTML generated using hilite.me --><div style="background: #eeeedd; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #8B008B; font-weight: bold">transition-property</span>: <span style="color: #8B008B; font-weight: bold">all</span>;
 <span style="color: #8B008B; font-weight: bold">transition-duration</span>: <span style="color: #8B008B; font-weight: bold">1s</span>;
 <span style="color: #8B008B; font-weight: bold">transition-timing-function</span>: <span style="color: #8B008B; font-weight: bold">ease</span>;	
 </pre></div>
             <p>Using Cubic-Bezier: You can see a bounce in the speed curve.</p>
             <div class="rotate" id="box3"></div>
-            <!-- HTML generated using hilite.me --><div style="background: #eeeedd; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #8B008B; font-weight: bold">transition</span>: <span style="color: #8B008B; font-weight: bold">all</span>;
+            <!-- HTML generated using hilite.me --><div style="background: #eeeedd; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #8B008B; font-weight: bold">transition-property</span>: <span style="color: #8B008B; font-weight: bold">all</span>;
 <span style="color: #8B008B; font-weight: bold">transition-duration</span>: <span style="color: #8B008B; font-weight: bold">1s</span>;
 <span style="color: #8B008B; font-weight: bold">transition-timing-function</span>: <span style="color: #8B008B; font-weight: bold">cubic-bezier</span>(<span style="color: #008b45; font-weight: bold">.23</span>,<span style="color: #8B008B; font-weight: bold">1</span><span style="color: #008b45; font-weight: bold">.07</span>,<span style="color: #008b45; font-weight: bold">.24</span>,<span style="color: #8B008B; font-weight: bold">-0</span><span style="color: #008b45; font-weight: bold">.79</span>);
 </pre></div>
+			<p>Specifying Properties: Changing Text color using the ease-out speed curve.</p>
+            <div class="colorChange" id="box4">This is the text inside my box, watch it change colors.</div>
         </div>
     </main>
 </body>
