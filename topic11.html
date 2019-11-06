@@ -26,6 +26,15 @@
           transition-duration: 1s;
           transition-timing-function: ease;		
         }
+        #box3
+        {
+          width: 200px;
+          height: 200px;
+          background: darkgreen;
+          transition: all;
+          transition-duration: 1s;
+        transition-timing-function: cubic-bezier(.23,1.07,.24,-0.79);
+        }
         .border:hover
         {
           box-shadow: inset 0 0 0 25px white;
@@ -34,6 +43,11 @@
 		{
           border-radius:100%;
 		}
+        .rotate:hover
+{
+        -webkit-transform: rotate(30deg);
+        transform: rotate(30deg);
+}
     </style>
 </head>
 <body>
@@ -56,6 +70,8 @@
             <div class="circle" id="box1"></div>
             <p>Adding An Inset Border</p>
             <div class="border" id="box2"></div>
+            <p>Using Cubic-Bezier</p>
+            <div class="rotate" id="box3"></div>
         </div>
     </main>
 </body>
