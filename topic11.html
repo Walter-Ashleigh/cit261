@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+<head>
+    <meta charset="utf-8" />
+    <title>CSS3 Transitions</title>
+    <meta name="viewport" content="width=device-width,
+    initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="StyleSheet1.css">
+    <style> 
+        body > div
+        {
+          width:483px;
+          height:298px;
+          background:#676470;
+          transition:all 0.3s ease;
+        }
+        .border:hover
+        {
+          box-shadow: inset 0 0 0 25px #53a7ea;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <header>CSS3 Transitions</header>
+        <div>
+            <h1>Transition Basics</h1>
+                <p>With the transition property, you're able to specify the properties that
+                will have the transition effect, the speed of the transition and the acceleration
+                and/or deceleration. 
+                </p>
+                <p>You can refer back to the transition/transformation and animation topic 
+                <a href="topic8.html">here</a> 
+                for more information on the values of the transition property.
+                </p>
+        </div>
+        <div>
+            <h1>Examples of Transitions</h1>
+            <p>Changing A Square To Circle</p>
+            <p>Adding A Shadow</p>
+            <p>Adding An Inset Border</p>
+            <div class="border">Add a border</div>
+        </div>
+    </main>
+</body>
+</html>
