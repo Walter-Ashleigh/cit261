@@ -33,7 +33,7 @@
           background: darkgreen;
           transition: all;
           transition-duration: 1s;
-        transition-timing-function: cubic-bezier(.23,1.07,.24,-0.79);
+          transition-timing-function: cubic-bezier(.23,1.07,.24,-0.79);
         }
         .border:hover
         {
@@ -44,20 +44,36 @@
           border-radius:100%;
 		}
         .rotate:hover
-{
-        -webkit-transform: rotate(30deg);
-        transform: rotate(30deg);
-}
+        {
+          -webkit-transform: rotate(30deg);
+          transform: rotate(30deg);
+        }
     </style>
 </head>
 <body>
     <main>
         <header>CSS3 Transitions</header>
         <div>
-            <h1>Transition Basics</h1>
+            <h1>Transition Basics & Speed Curve</h1>
                 <p>With the transition property, you're able to specify the properties that
                 will have the transition effect, the speed of the transition and the acceleration
                 and/or deceleration. 
+                </p>
+                <p>The speed curves, which are the values of the transition-timing-function property, 
+                allow you many options to play with in deciding how you want the transition to look
+                when it occurs.  
+                <br></br>
+                &bull; ease - slow start, then fast, then end slowly (this is default)
+                <br></br>
+                &bull; linear - same speed from start to end
+                <br></br>
+                &bull; ease-in - slow start
+                <br></br>
+                &bull; ease-out - slow end
+                <br></br>
+                &bull; ease-in-out - slow start and slow end
+                <br></br>
+                &bull; cubic-bezier(n,n,n,n) - the most customizable
                 </p>
                 <p>You can refer back to the transition/transformation and animation topic 
                 <a href="topic8.html">here</a> 
@@ -66,12 +82,24 @@
         </div>
         <div>
             <h1>Examples of Transitions</h1>
-            <p>Changing A Square To Circle</p>
+            <p>Changing A Square To Circle: Uses the linear speed curve.</p>
             <div class="circle" id="box1"></div>
-            <p>Adding An Inset Border</p>
+            <!-- HTML generated using hilite.me --><div style="background: #eeeedd; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #8B008B; font-weight: bold">transition</span>: <span style="color: #8B008B; font-weight: bold">all</span>;
+<span style="color: #8B008B; font-weight: bold">transition-duration</span>: <span style="color: #008b45; font-weight: bold">.5s</span>;
+<span style="color: #8B008B; font-weight: bold">transition-timing-function</span>: <span style="color: #8B008B; font-weight: bold">linear</span>;	
+</pre></div>
+            <p>Adding An Inset Border: Uses the ease speed curve.</p>
             <div class="border" id="box2"></div>
-            <p>Using Cubic-Bezier</p>
+            <!-- HTML generated using hilite.me --><div style="background: #eeeedd; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #8B008B; font-weight: bold">transition</span>: <span style="color: #8B008B; font-weight: bold">all</span>;
+<span style="color: #8B008B; font-weight: bold">transition-duration</span>: <span style="color: #8B008B; font-weight: bold">1s</span>;
+<span style="color: #8B008B; font-weight: bold">transition-timing-function</span>: <span style="color: #8B008B; font-weight: bold">ease</span>;	
+</pre></div>
+            <p>Using Cubic-Bezier: You can see a bounce in the speed curve.</p>
             <div class="rotate" id="box3"></div>
+            <!-- HTML generated using hilite.me --><div style="background: #eeeedd; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #8B008B; font-weight: bold">transition</span>: <span style="color: #8B008B; font-weight: bold">all</span>;
+<span style="color: #8B008B; font-weight: bold">transition-duration</span>: <span style="color: #8B008B; font-weight: bold">1s</span>;
+<span style="color: #8B008B; font-weight: bold">transition-timing-function</span>: <span style="color: #8B008B; font-weight: bold">cubic-bezier</span>(<span style="color: #008b45; font-weight: bold">.23</span>,<span style="color: #8B008B; font-weight: bold">1</span><span style="color: #008b45; font-weight: bold">.07</span>,<span style="color: #008b45; font-weight: bold">.24</span>,<span style="color: #8B008B; font-weight: bold">-0</span><span style="color: #008b45; font-weight: bold">.79</span>);
+</pre></div>
         </div>
     </main>
 </body>
