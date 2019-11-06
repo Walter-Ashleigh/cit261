@@ -8,17 +8,32 @@
     initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="StyleSheet1.css">
     <style> 
-        #box
+    	#box1
         {
-          width:483px;
-          height:298px;
-          background:#676470;
-          transition:all 0.3s ease;
+          width: 200px;
+          height: 200px;
+          background: white;
+          transition: all;
+          transition-duration: .5s;
+          transition-timing-function: linear;		
+        }
+        #box2
+        {
+          width: 350px;
+          height: 150px;
+          background: darkred;
+          transition: all;
+          transition-duration: 1s;
+          transition-timing-function: ease;		
         }
         .border:hover
         {
-          box-shadow: inset 0 0 0 25px #53a7ea;
+          box-shadow: inset 0 0 0 25px white;
         }
+        .circle:hover
+		{
+          border-radius:100%;
+		}
     </style>
 </head>
 <body>
@@ -38,9 +53,9 @@
         <div>
             <h1>Examples of Transitions</h1>
             <p>Changing A Square To Circle</p>
-            <p>Adding A Shadow</p>
+            <div class="circle" id="box1"></div>
             <p>Adding An Inset Border</p>
-            <div class="border" id="box">Add a border</div>
+            <div class="border" id="box2"></div>
         </div>
     </main>
 </body>
