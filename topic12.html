@@ -14,8 +14,76 @@
     <main>
         <header>CSS3 Transforms</header>
         <div>
-            <h1>Transformations</h1>
-            <p></p>
+            <h1>Transformations 2D and 3D</h1>
+            <p>The transformation property allows you to change the shape, size and position
+            of an element. There are several methods that can be used to enhance your transformation
+            and they differ between 2D and 3D.
+            </p>
+            <h3>2D:</h3>
+            <p>&bull; Translate: The element will move from one point to another given point. 
+            (translateX or translateY or similar but only move in one axis compared to using the 
+            top and left parameters.)
+            <br></br>
+            &bull; Rotate: The element will rotate clockwise to a given degree that is specified 
+            in the parameters.
+            <br></br>
+            &bull; Scale: The element's size will be increased or decreased, given width and height.  
+            Like the translate property, you can also use scaleX or scaleY to increase/decrease the size 
+            in one axis.
+            <br></br>
+            &bull; Skew: The element's corner points are set to different positions to skew the image,
+            pushing or pulling them one direction or another. (You can use skewX or skewY here.)
+            <br></br>
+            &bull; Matrix: This is an alternative to using the above methods.  You can translate, 
+            rotate, scale and skew using the matrix method as well.  This matrix method take 6 paramaters
+            to apply a given transformation to an element.  
+            <br></br>
+            </p>
+            <h3>3D:</h3>
+            <p>&bull; Matrix 3D: The same as the 2D matrix; however, it takes 16 parameters.
+            <br></br>
+            &bull; Translate 3D: Takes an additional Z-axis parameter.
+            <br></br>
+            &bull; Scale 3D: Takes an additional Z-axis parameter. (You can also only use scaleZ.)
+            <br></br>
+            &bull; Rotate 3D: Takes 4 parameters.(X, Y, and Z to define the direction and a degree to 
+            rotate it in.)
+            <br></br>
+        </p>
+        </div>
+        <div>
+            <p>translate()
+            <!-- HTML generated using hilite.me --><div style="background: #eeeedd; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #8B008B; font-weight: bold">div</span>{ 
+    transform: translate(<span style="color: #B452CD">20px</span>,<span style="color: #B452CD">20px</span>); 
+}
+</pre></div>
+            <br></br>
+            rotate()
+            <!-- HTML generated using hilite.me --><div style="background: #eeeedd; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #8B008B; font-weight: bold">div</span>{ 
+    transform: rotate(<span style="color: #B452CD">30</span>deg); 
+}
+</pre></div>
+            <br></br>
+            scale()
+            <!-- HTML generated using hilite.me --><div style="background: #eeeedd; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #8B008B; font-weight: bold">div</span>{ 
+    transform: scale(<span style="color: #B452CD">2</span>,<span style="color: #B452CD">4</span>); 
+}
+</pre></div>
+            <br></br>
+            skew()
+            <!-- HTML generated using hilite.me --><div style="background: #eeeedd; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #8B008B; font-weight: bold">div</span>{ 
+    transform: skew(<span style="color: #B452CD">30</span>deg,<span style="color: #B452CD">20</span>deg); 
+}
+</pre></div>
+            <br></br>
+            matrix()
+            <!-- HTML generated using hilite.me --><div style="background: #eeeedd; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #228B22">/* matrix(scaleX(),skewY(),skewX(),scaleY(),translateX(),translateY()) */</span>
+<span style="color: #8B008B; font-weight: bold">div</span>{ 
+    transform: matrix(<span style="color: #B452CD">1</span>.<span style="color: #B452CD">0</span>, <span style="color: #B452CD">2</span>.<span style="color: #B452CD">0</span>, <span style="color: #B452CD">3</span>.<span style="color: #B452CD">0</span>, <span style="color: #B452CD">4</span>.<span style="color: #B452CD">0</span>, <span style="color: #B452CD">5</span>.<span style="color: #B452CD">0</span>, <span style="color: #B452CD">6</span>.<span style="color: #B452CD">0</span>); 
+}
+</pre></div>
+            <br></br>
+            </p>
         </div>
     </main>
 </body>
