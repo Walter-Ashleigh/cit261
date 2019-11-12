@@ -8,6 +8,27 @@
     initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="StyleSheet1.css">
     <style> 
+        #ex {
+              width: 200px;
+              height: 70px;
+              background-color: white;
+              border: 1px solid black;
+            }
+        .t {
+              transform: translate(20px, 20px);
+            }
+        .r {
+              transform: rotate(30deg);
+            }
+        .sc {
+              transform: scale(0.5,0.5);
+        }
+        .sk {
+              transform: skew(30deg,20deg);
+        }
+        .m {
+              transform: matrix(1.5, 0.5, -2, 0.7, 105, 2);
+        }
     </style>
 </head>
 <body>
@@ -52,34 +73,52 @@
         </p>
         </div>
         <div>
-            <p>translate()
+            <h1>Syntax & Examples</h1>
+            <p>
+            <div id="ex">
+                without translate() (the default position)
+            </div>
+            <div id="ex" class="t">
+                translate()
+            </div>
+            <br></br>
             <!-- HTML generated using hilite.me --><div style="background: #eeeedd; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #8B008B; font-weight: bold">div</span>{ 
     transform: translate(<span style="color: #B452CD">20px</span>,<span style="color: #B452CD">20px</span>); 
 }
 </pre></div>
+<br></br>
+            <div id="ex" class="r">
+                rotate()
+            </div>
             <br></br>
-            rotate()
             <!-- HTML generated using hilite.me --><div style="background: #eeeedd; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #8B008B; font-weight: bold">div</span>{ 
     transform: rotate(<span style="color: #B452CD">30</span>deg); 
 }
 </pre></div>
-            <br></br>
-            scale()
+            <div id="ex" class="sc">
+                scale()
+            </div>
             <!-- HTML generated using hilite.me --><div style="background: #eeeedd; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #8B008B; font-weight: bold">div</span>{ 
-    transform: scale(<span style="color: #B452CD">2</span>,<span style="color: #B452CD">4</span>); 
+    transform: scale(<span style="color: #B452CD">0.5</span>,<span style="color: #B452CD">0.5</span>); 
 }
 </pre></div>
             <br></br>
-            skew()
+            <div id="ex" class="sk">
+                skew()
+            </div>
+            <br></br>
             <!-- HTML generated using hilite.me --><div style="background: #eeeedd; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #8B008B; font-weight: bold">div</span>{ 
     transform: skew(<span style="color: #B452CD">30</span>deg,<span style="color: #B452CD">20</span>deg); 
 }
 </pre></div>
             <br></br>
-            matrix()
+            <div id="ex" class="m">
+                matrix()
+            </div>
+            <br></br>
             <!-- HTML generated using hilite.me --><div style="background: #eeeedd; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #228B22">/* matrix(scaleX(),skewY(),skewX(),scaleY(),translateX(),translateY()) */</span>
 <span style="color: #8B008B; font-weight: bold">div</span>{ 
-    transform: matrix(<span style="color: #B452CD">1</span>.<span style="color: #B452CD">0</span>, <span style="color: #B452CD">2</span>.<span style="color: #B452CD">0</span>, <span style="color: #B452CD">3</span>.<span style="color: #B452CD">0</span>, <span style="color: #B452CD">4</span>.<span style="color: #B452CD">0</span>, <span style="color: #B452CD">5</span>.<span style="color: #B452CD">0</span>, <span style="color: #B452CD">6</span>.<span style="color: #B452CD">0</span>); 
+    transform: matrix(<span style="color: #B452CD">1</span>.<span style="color: #B452CD">5</span>, <span style="color: #B452CD">0</span>.<span style="color: #B452CD">5</span>, <span style="color: #B452CD">-2</span>, <span style="color: #B452CD">0</span>.<span style="color: #B452CD">7</span>, <span style="color: #B452CD">105</span>, <span style="color: #B452CD">2</span>);
 }
 </pre></div>
             <br></br>
