@@ -14,8 +14,71 @@
     <main>
         <header>JSON</header>
         <div>
-            <h1></h1>
-            <p></p>
+            <h1>Parse</h1>
+            <p>JSON allows you to exchange data to and from the server. When the data is 
+            recieved it's always a string.  You can use JSON.parse() to parse the data into 
+            a JavaScript object.
+            <br></br>
+            We start with a variable, in this case I use the JSON format and create the txt variable. 
+            It contains keys and values which I will parse and display into a sentence.</p>
+            <!-- HTML generated using hilite.me --><div style="background: #eeeedd; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #8B008B; font-weight: bold">var</span> txt = <span style="color: #CD5555">&#39;{&quot;name&quot;:&quot;Ashleigh&quot;, &quot;sport&quot;:&quot;football&quot;, &quot;team&quot;:&quot;Chargers&quot;, &quot;year&quot;:&quot;2018&quot;}&#39;</span>
+</pre></div>
+            <p>To parse we use this syntax:</p>
+            <!-- HTML generated using hilite.me --><div style="background: #eeeedd; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #8B008B; font-weight: bold">var</span> obj = JSON.parse(txt);
+</pre></div>
+            <p>I'm now creating a new object called 'obj' where my txt data will be parsed into.
+            <br></br>
+            The last step is to get my element by id and properly format my sentence:</p>
+            <!-- HTML generated using hilite.me --><div style="background: #eeeedd; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #658b00">document</span>.getElementById(<span style="color: #CD5555">&quot;display&quot;</span>).innerHTML = obj.name 
++ <span style="color: #CD5555">&quot; has always enjoyed &quot;</span> 
++ obj.sport
++ <span style="color: #CD5555">&quot;. She really wishes the &quot;</span> 
++ obj.team 
++ <span style="color: #CD5555">&quot; were doing as well as they did in the &quot;</span> 
++ obj.year
++ <span style="color: #CD5555">&quot; season.&quot;</span>;
+</pre></div>
+            <p>This is the result of my JSON.parse() example:</p>
+            <p id="display"></p>
+
+            <script>
+            var txt = '{"name":"Ashleigh", "sport":"football", "team":"Chargers", "year":"2018"}'
+            var obj = JSON.parse(txt);
+            document.getElementById("display").innerHTML = obj.name 
+            + " has always enjoyed " 
+            + obj.sport
+            + ". She really wishes the " 
+            + obj.team 
+            + " were doing as well as they did in the " 
+            + obj.year
+            + " season.";
+            </script>
+        </div>
+        <div>
+            <h1>Stringify</h1>
+            <p>The data that's passed with JSON is formatted in JSON; However, we can 
+            use JSON.stringify() to convert that data to a string.
+            <br></br>
+            In this example we start with a JavaScript object:</p>
+            <!-- HTML generated using hilite.me --><div style="background: #eeeedd; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #8B008B; font-weight: bold">var</span> obj = { name: <span style="color: #CD5555">&quot;Ashleigh&quot;</span>, age: <span style="color: #B452CD">31</span>, city: <span style="color: #CD5555">&quot;Melbourne&quot;</span>, state: <span style="color: #CD5555">&quot;Florida&quot;</span> };
+</pre></div>
+            <p>To convert this data to a string we will use the syntax:</p>
+            <!-- HTML generated using hilite.me --><div style="background: #eeeedd; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #8B008B; font-weight: bold">var</span> myJSON = JSON.stringify(obj);
+</pre></div>
+            <p>This creates a new variable called 'myJSON' which accepts my original JavaScript object 
+            into the parameters of the stringify function. Now that it's a string it can be sent to the server.
+            <br></br>
+            Here we get the element by id and use it to display our string:</p>
+            <!-- HTML generated using hilite.me --><div style="background: #eeeedd; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #658b00">document</span>.getElementById(<span style="color: #CD5555">&quot;display2&quot;</span>).innerHTML = myJSON;
+</pre></div>
+            <p>This is the result of my JSON.stringify() example:</p>
+            <p id="display2"></p>
+
+            <script>
+                var obj = { name: "Ashleigh", age: 31, city: "Melbourne", state: "Florida" };
+                var myJSON = JSON.stringify(obj);
+                document.getElementById("display2").innerHTML = myJSON;
+            </script>
         </div>
     </main>
 </body>
