@@ -8,14 +8,103 @@
     initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="StyleSheet1.css">
     <style> 
+        #bgImage {
+          max-width: 500px;
+          background-image: url('../cit261/clipart-wave.jpg');
+        }
+        .swing { 
+          transform-origin: top center;
+          animation-name: swing; 
+          animation-duration: 8s;
+          animation-iteration-count: 3;
+          animation-direction: alternate;
+        }
+
+        @keyframes swing { 
+          20% { transform: rotate(15deg); } 
+          40% { transform: rotate(-10deg); } 
+          60% { transform: rotate(5deg); } 
+          80% { transform: rotate(-5deg); } 
+          100% { transform: rotate(0deg); } 
+        }
     </style>
 </head>
 <body>
     <main>
         <header>CSS3 Animations</header>
         <div>
-            <h1>Animations</h1>
-            <p></p>
+            <h1>Animation Building Blocks</h1>
+            <p>You need two key things when creating an animation in CSS.
+            <br></br>
+            &bull; <strong>Keyframes - This defines the stages and styling.</strong>
+            <br></br>
+            Keyframes include: 
+            <br></br>
+            - The name of the animation: For example, "Swing".
+            <br></br>
+            - The stages of the animation: Each stage is represented with a percentage.
+            0% is the start and 100% would be the end. Intermediate stages in between can 
+            also be specified.
+            <br></br>
+            - The CSS properties: These would be the CSS properties that are defined and assigned
+            to each stage. For example, transform, opacity, etc...
+            <br></br>
+            &bull; <strong>Animation Properties - This defines the keyframes to assign to a specific 
+            element, as well as how it should be animated. This makes your animation
+            actually run.</strong>
+            <br></br>
+            The Animation Properties need to make it run are:
+            <br></br>
+            - animation-name: This is the name you define in the keyframes.
+            <br></br>
+            - animation-duration: In seconds or milliseconds you define how long the animation lasts.
+            <br></br>
+            Other animation properties that can be used but aren't necessary to make it run, are:
+            <br></br>
+            &bull; animation-timing-function: defines a speed curve (i.e linear, ease, etc.)
+            <br></br>
+            &bull; animation-delay: upon loading, it delays the start of the animation for the specified time.
+            <br></br>
+            &bull; animation-direction: defines the direction of the animation after a cycle has concluded.
+            <br></br>
+            &bull; animation-iteration-count: specifies the number of times the animation will occur.
+            <br></br>
+            &bull; animation-fill-mode: specifies a style for the element once it's finished playing. (i.e.
+            if a box moves from the right to the left, you can have it return to it's starting position or
+            leave it where it ended.)
+            <br></br>
+            &bull; animation-play-state: pause or play the animation. 
+            </p>
+        </div>
+        <div>
+            <h1>Example</h1>
+            <p>Keyframes:</p>
+            <!-- HTML generated using hilite.me --><div style="background: #eeeedd; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #8B008B; font-weight: bold">@keyframes</span> <span style="color: #8B008B; font-weight: bold">swing</span> { 
+  <span style="color: #228B22">/* At each interval the element will be rotated</span>
+  <span style="color: #228B22">  to the specified degree. The starting point is 0%</span>
+  <span style="color: #228B22">  and ending is 100% */</span>
+    <span style="color: #8B008B; font-weight: bold">20</span>% { transform: rotate(<span style="color: #B452CD">15</span>deg); } 
+    <span style="color: #8B008B; font-weight: bold">40</span>% { transform: rotate(<span style="color: #B452CD">-10</span>deg); } 
+    <span style="color: #8B008B; font-weight: bold">60</span>% { transform: rotate(<span style="color: #B452CD">5</span>deg); } 
+    <span style="color: #8B008B; font-weight: bold">80</span>% { transform: rotate(<span style="color: #B452CD">-5</span>deg); } 
+    <span style="color: #8B008B; font-weight: bold">100</span>% { transform: rotate(<span style="color: #B452CD">0</span>deg); } 
+  }
+  </pre></div>  
+            <p>Animation Properties:</p>
+            <!-- HTML generated using hilite.me --><div style="background: #eeeedd; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #008b45; font-weight: bold">.swing</span> { 
+ <span style="color: #228B22">/* this is default if not set */</span>
+ transform-origin: <span style="color: #8B008B; font-weight: bold">top</span> <span style="color: #8B008B; font-weight: bold">center</span>;
+ <span style="color: #228B22">/* specifies the keyframes named &#39;swing&#39; */</span>
+ animation-name: swing; 
+ <span style="color: #228B22">/* lasts 8 seconds */</span>
+ animation-duration: <span style="color: #B452CD">8s</span>;
+ <span style="color: #228B22">/* animation plays three times */</span>
+ animation-iteration-count: <span style="color: #B452CD">3</span>;
+ <span style="color: #228B22">/* the keyframes alternate forward and backwards */</span>
+ animation-<span style="color: #8B008B; font-weight: bold">direction</span>: alternate;
+}
+</pre></div>
+            <div id ="bgImage" class ="swing"></div>
         </div>
     </main>
 </body>
