@@ -9,8 +9,11 @@
     <link rel="stylesheet" type="text/css" href="StyleSheet1.css">
     <style> 
         #bgImage {
-          max-width: 500px;
-          background-image: url('../cit261/clipart-wave.jpg');
+          background-color: transparent;
+          font-size:x-large;
+          text-align: center;
+          color: white;
+          border: none;
         }
         .swing { 
           transform-origin: top center;
@@ -22,7 +25,7 @@
 
         @keyframes swing { 
           20% { transform: rotate(15deg); } 
-          40% { transform: rotate(-10deg); } 
+          40% { transform: rotate(-10deg); }
           60% { transform: rotate(5deg); } 
           80% { transform: rotate(-5deg); } 
           100% { transform: rotate(0deg); } 
@@ -104,7 +107,8 @@
  animation-<span style="color: #8B008B; font-weight: bold">direction</span>: alternate;
 }
 </pre></div>
-            <div id ="bgImage" class ="swing"></div>
+            <br></br>
+            <div id ="bgImage" class ="swing"> This text is swinging thanks to my animation. :)</div>
         </div>
     </main>
 </body>
