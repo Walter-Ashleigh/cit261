@@ -14,8 +14,131 @@
     <main>
         <header>DOM Document Object Model</header>
         <div>
-            <h1></h1>
-            <p></p>
+            <h1>Tree of Objects</h1>
+            <img src="https://www.w3schools.com/js/pic_htmltree.gif" width="450" 
+            alt="HTML DOM Tree of Objects Model"/>
+            <p>With the Document Object Model, Javascript can interact with it in multiple ways:
+            <br></br>
+            &bull; change HTML elements
+            <br></br>
+            &bull; change HTML attributes
+            <br></br>
+            &bull; change CSS styles
+            <br></br>
+            &bull; remove existing HTML elements and attributes
+            <br></br>
+            &bull; add new HTML elements and attributes
+            <br></br>
+            &bull; react to existing HTML events
+            <br></br>
+            &bull; create new HTML events
+            </p>
+        </div>
+        <div>
+            <h1>createElement() Method</h1>
+            <p>This method allows you to create an Element node with the specified name.  
+            Some examples would be creating a button or a paragraph element.
+            <br><br>
+            Syntax:</p>
+            <!-- HTML generated using hilite.me --><div style="background: #eeeedd; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #8B008B; font-weight: bold">var</span> elem = <span style="color: #658b00">document</span>.createElement(nodename);
+</pre></div>
+            <p>Button example:</p>
+            <p id="btn1"></p>
+            <button onclick="createBtn()">Click to make a button</button>
+
+            <script>
+            function createBtn() {
+            var btn = document.createElement("BUTTON");
+            btn.innerHTML = "You made one!";
+            var elmnt1 = document.getElementById("btn1");
+            elmnt1.appendChild(btn);
+            }
+            </script>
+            </p>
+            <p>Paragraph example:</p>
+            <div id="div1" style="border: none;">
+                <p id="p2"></p>
+                <button onclick="createPara()">Create a paragraph</button>
+            </div>
+            <script>
+            function createPara() {
+            var para = document.createElement("P");
+            para.innerText = "Here is your paragraph.";
+            var elmnt2 = document.getElementById("p2");
+            elmnt2.appendChild(para);
+            }
+            </script>
+            <p>Detailed syntax for creating an element:</p>
+            <!-- HTML generated using hilite.me --><div style="background: #eeeedd; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #8B008B; font-weight: bold">function</span> createBtn() {
+<span style="color: #228B22">// create the element (in this case, a button)</span>
+<span style="color: #8B008B; font-weight: bold">var</span> btn = <span style="color: #658b00">document</span>.createElement(<span style="color: #CD5555">&quot;BUTTON&quot;</span>);
+<span style="color: #228B22">// add text to the element</span>
+btn.innerHTML = <span style="color: #CD5555">&quot;You made one!&quot;</span>;
+<span style="color: #228B22">// find an existing element (in this case, </span>
+<span style="color: #228B22">// it&#39;s the element with the id &quot;btn1&quot;)</span>
+<span style="color: #8B008B; font-weight: bold">var</span> elmnt1 = <span style="color: #658b00">document</span>.getElementById(<span style="color: #CD5555">&quot;btn1&quot;</span>);
+<span style="color: #228B22">// append the new element to the existing one</span>
+elmnt1.appendChild(btn);
+}
+</pre></div>
+        </div>
+        <div>
+            <h1>insertBefore()</h1>
+            <p>You can specify the location to append an element to.  For example,
+            insertBefore() allows you to place the element in front of any others. 
+            </p>
+
+            <button onclick="insertParaBefore()">Click to insert text before the paragraph example above</button>
+            <script>
+                function insertParaBefore() {
+                var para = document.createElement("p");
+                var node = document.createTextNode("I decided to add this before my first p element example.");
+                para.appendChild(node);
+                
+                var elmnt = document.getElementById("div1");
+                var child = document.getElementById("p2");
+                elmnt.insertBefore(para,child);
+                }
+            </script>
+            <p>Detailed syntax:</p>
+            <!-- HTML generated using hilite.me --><div style="background: #eeeedd; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #8B008B; font-weight: bold">function</span> insertParaBefore() {
+<span style="color: #228B22">// create a paragraph element</span>
+<span style="color: #8B008B; font-weight: bold">var</span> para = <span style="color: #658b00">document</span>.createElement(<span style="color: #CD5555">&quot;p&quot;</span>);
+<span style="color: #228B22">// create a text node</span>
+<span style="color: #8B008B; font-weight: bold">var</span> node = <span style="color: #658b00">document</span>.createTextNode(<span style="color: #CD5555">&quot;I decided to add this before my first p element example.&quot;</span>);
+<span style="color: #228B22">// append the text to the paragraph element we created</span>
+para.appendChild(node);
+<span style="color: #228B22">// find existing elements</span>
+<span style="color: #8B008B; font-weight: bold">var</span> elmnt = <span style="color: #658b00">document</span>.getElementById(<span style="color: #CD5555">&quot;div1&quot;</span>);
+<span style="color: #8B008B; font-weight: bold">var</span> child = <span style="color: #658b00">document</span>.getElementById(<span style="color: #CD5555">&quot;p2&quot;</span>);
+<span style="color: #228B22">// insert our element before the other</span>
+elmnt.insertBefore(para,child);
+}
+</pre></div>
+        </div>
+        <div>
+            <h1>remove()</h1>
+            <p>This method is pretty straight forward and allows you to remove an 
+            existing element.
+            </p>
+            <button onclick="removeBtn()">Remove Your Button</button>
+            <button onclick="removePara()">Remove Your Paragraph</button>
+            <script>
+            function removeBtn() {
+            var elmnt = document.getElementById("btn1");
+            elmnt.remove();
+            }
+
+            function removePara() {
+            var elmnt2 = document.getElementById("p2");
+            elmnt2.remove();
+            }
+            </script>
+            <!-- HTML generated using hilite.me --><div style="background: #eeeedd; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #228B22">// find your existing element</span>
+<span style="color: #8B008B; font-weight: bold">var</span> elmnt = <span style="color: #658b00">document</span>.getElementById(<span style="color: #CD5555">&quot;btn1&quot;</span>);
+<span style="color: #228B22">// remove it</span>
+elmnt.remove();
+</pre></div>
         </div>
     </main>
 </body>
