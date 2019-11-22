@@ -14,8 +14,65 @@
     <main>
         <header>JavaScript Objects</header>
         <div>
-            <h1></h1>
-            <p></p>
+            <h1>Objects and Properties</h1>
+            <p>Objects are just like variables (which are containers for data values); although, 
+            and object can store many values. Each property is written as name:value pairs.  For example, 
+            We can create an object named Ashleigh and assign it the values, female, 31, hazel, 
+            and brown. These values would be paired with the defined properties we come up with. 
+            For this example I have several properties and they're named: gender, age, eyes and hair.
+            Just like a regular person, the values of each of these properties can change, but these
+            defined ones are specific to me, Ashleigh.  The syntax that goes along with this is as follows:
+            </p>
+            <!-- HTML generated using hilite.me --><div style="background: #eeeedd; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #228B22">// Create an object named Ashleigh:</span>
+<span style="color: #8B008B; font-weight: bold">var</span> ashleigh = {gender:<span style="color: #CD5555">&quot;female&quot;</span>, age:<span style="color: #CD5555">31</span>, eyes:<span style="color: #CD5555">&quot;hazel&quot;</span>, hair:<span style="color: #CD5555">&quot;brown&quot;</span>};
+</pre></div>
+        </div>
+        <div>
+            <h1>Methods</h1>
+            <p>An object can contain a method.  Methods are actions that are to be performed
+            on an object and they're functions stored as a property.
+            </p>
+            <p>Detailed Syntax:</p>
+            <!-- HTML generated using hilite.me --><div style="background: #eeeedd; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #228B22">// Create an object</span>
+<span style="color: #8B008B; font-weight: bold">var</span> person = {
+    name: <span style="color: #CD5555">&quot;Ashleigh&quot;</span>,
+    gender: <span style="color: #CD5555">&quot;female&quot;</span>,
+    age: <span style="color: #B452CD">31</span>,
+    eyes: <span style="color: #CD5555">&quot;hazel&quot;</span>,
+    hair: <span style="color: #CD5555">&quot;brown&quot;</span>,
+    <span style="color: #228B22">// this value is our nameAndAge function</span>
+    nameAndAge : <span style="color: #8B008B; font-weight: bold">function</span>() {
+      <span style="color: #8B008B; font-weight: bold">return</span> <span style="color: #8B008B; font-weight: bold">this</span>.name + <span style="color: #CD5555">&quot;, &quot;</span> + <span style="color: #8B008B; font-weight: bold">this</span>.age;
+    }
+  };
+  
+  <span style="color: #228B22">// Display data from the object</span>
+  <span style="color: #8B008B; font-weight: bold">function</span> getObject(){
+  <span style="color: #228B22">// if you don&#39;t include the parenthesis it will return the entire function</span>
+  <span style="color: #658b00">document</span>.getElementById(<span style="color: #CD5555">&quot;objMethod&quot;</span>).innerHTML = person.nameAndAge();
+  }
+  </pre></div>
+  
+            <p id="objMethod"></p>
+            <button onclick="getObject()">Get data from my object</button>
+
+            <script>
+                var person = {
+                name: "Ashleigh",
+                gender: "female",
+                age: 31,
+                eyes: "hazel",
+                hair: "brown",
+                nameAndAge : function() {
+                    return this.name + ", " + this.age;
+                }
+                };
+
+                // Display some data from the object:
+                function getObject(){
+                document.getElementById("objMethod").innerHTML = person.nameAndAge();
+                }
+            </script>
         </div>
     </main>
 </body>
