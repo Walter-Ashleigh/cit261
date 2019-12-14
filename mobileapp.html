@@ -17,11 +17,12 @@
         }
     </style>
     <script>
+        // Add the selected option to local storage
         function addToStorage() {
           
           if (document.getElementById("meal1").checked) {
              localStorage.setItem("food", "Tortellini");
-             //function meal1recipe();
+             //function meal1recipe(); // This was suppose to call another function to display recipe details
           }
           else if (document.getElementById("meal2").checked) {
              localStorage.setItem("food", "Pizza");
@@ -34,6 +35,7 @@
           }
          }
 
+         // Get the selected recipe and display it
          function viewRecipe() {
            var x = localStorage.getItem("food");
  
@@ -41,10 +43,12 @@
            document.getElementById('displayRecipe').style.display='block';
          }
 
-         function meal1recipe() {
-            document.getElementById('tortelliniRecipe').style.display='block';
-         }
+         // Commented out this function because it caused an error and the rest of the app stopped working
+         //function meal1recipe() {
+         //   document.getElementById('tortelliniRecipe').style.display='block';
+         //}
 
+        // Clear the storage, uncheck selected checkbox, and hide the recipe
          function clearSelection() {
             localStorage.clear();
             document.getElementById('displayRecipe').style.display='none';
@@ -76,7 +80,8 @@
             <button onclick="clearSelection()">Clear Saved Recipe</button>
 
             <p style="display: none;" class="theDisplay" id="displayRecipe"></p>
-            <p style="display: none;" class="theDisplay" id="tortelliniRecipe"> This is my recipe yadda yeadda</p>           
+            <p style="display: none;" class="theDisplay" id="tortelliniRecipe"> 
+                This was supposed to display the actual recipe with ingredients</p>           
 
         </div>
     </main>
