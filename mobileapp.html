@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+<head>
+    <meta charset="utf-8" />
+    <title>Mobile App</title>
+    <meta name="viewport" content="width=device-width,
+    initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="StyleSheet1.css">
+    <style> 
+        .theDisplay{
+            width: 300px;
+            height: auto;
+            background: darkgreen;
+            color: #fff;
+            text-align: center;
+        }
+    </style>
+    <script>
+        function addToStorage() {
+          
+          if (document.getElementById("meal1").checked) {
+             localStorage.setItem("food", "Tortellini");
+             //function meal1recipe();
+          }
+          else if (document.getElementById("meal2").checked) {
+             localStorage.setItem("food", "Pizza");
+          }
+          else if (document.getElementById("meal3").checked) {
+             localStorage.setItem("food", "Tacos");
+          }
+          else if (document.getElementById("meal4").checked) {
+             localStorage.setItem("food", "Cheesecake");
+          }
+         }
+
+         function viewRecipe() {
+           var x = localStorage.getItem("food");
+ 
+           document.getElementById("displayRecipe").innerHTML = x;
+           document.getElementById('displayRecipe').style.display='block';
+         }
+
+         function meal1recipe() {
+            document.getElementById('tortelliniRecipe').style.display='block';
+         }
+
+         function clearSelection() {
+            localStorage.clear();
+            document.getElementById('displayRecipe').style.display='none';
+            document.getElementById("meal1").checked = false;
+            document.getElementById("meal2").checked = false;
+            document.getElementById("meal3").checked = false;
+            document.getElementById("meal4").checked = false;
+         }
+
+    </script>
+</head>
+<body>
+    <main>
+        <header>Recipe Bank</header>
+        <div>
+            <p style="text-align: center;">Easily access many recipes in one place.</p>
+            <h3>What Do You Want To Cook?</h3>
+            
+            <p>Select a meal</p>
+            <input type="checkbox" name="food" id="meal1" onchange="addToStorage()"> Tortellini 
+            <br></br>
+            <input type="checkbox" name="food" id="meal2" onchange="addToStorage()"> Pizza
+            <br></br>
+            <input type="checkbox" name="food" id="meal3" onchange="addToStorage()"> Tacos
+            <br></br>
+            <input type="checkbox" name="food" id="meal4" onchange="addToStorage()"> Cheesecake
+            <br></br>
+            <button onclick="viewRecipe()">Save/View Recipe</button>
+            <button onclick="clearSelection()">Clear Saved Recipe</button>
+
+            <p style="display: none;" class="theDisplay" id="displayRecipe"></p>
+            <p style="display: none;" class="theDisplay" id="tortelliniRecipe"> This is my recipe yadda yeadda</p>           
+
+        </div>
+    </main>
+</body>
+</html>
